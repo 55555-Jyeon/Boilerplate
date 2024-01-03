@@ -1,4 +1,4 @@
-# Boilterplate
+# Boilerplate
 
 personal boilerplate <br />
 for more info plz check my velog 👉 https://velog.io/@55555-jyeon/Boilerplate
