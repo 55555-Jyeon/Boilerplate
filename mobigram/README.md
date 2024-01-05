@@ -1,70 +1,93 @@
-# Getting Started with Create React App
+# Boilerplate
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+personal boilerplate <br />
+for more info plz check my velog 👉 https://velog.io/@55555-jyeon/Boilerplate <br />
 
-## Available Scripts
+<br />
 
-In the project directory, you can run:
+---
 
-### `npm start`
+### 🗂️ folder structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<p>
+<p>boilerplate template structure && toy project structure </p>
+  <img width="30%" src="https://github.com/55555-Jyeon/Boilterplate/assets/134191817/3b81ad8c-26f3-4d68-bd6d-86252105d460"  alt="template" />
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+  <img width="30%" src="" alt="toyproject"  />
+</p>
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 🧸 toyproject based on my template
 
-### `npm run build`
+#### schedule table
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<table>
+  <tr>
+    <td>number</td>
+    <td> 🗓️ </td>
+    <td>todo title</td>
+    <td>check</td>
+    <td>💬</td>
+  </tr>
+  <tr>
+    <td>day 01</td>
+    <td>2024-01-04</td>
+    <td>design</td>
+    <td>✔️</td>
+    <td>-</td>
+  </tr>
+  <tr>
+    <td>day 02</td>
+    <td>2024-01-05</td>
+    <td>login page</td>
+    <td></td>
+    <td>carousel & msw worker issue</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### details
 
-### `npm run eject`
+##### day 01
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+###### range | 2024.01.04
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<br />
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+[ checklist ] <br />
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+instagram 참고해 mobigram 사이트 디자인 ✅ <br />
+theme.style.js 디자인에 맞게 수정 ✅ <br />
+faker.js 와 msw 를 이용해 목데이터 만들기 (더 상세한 데이터는 만들면서 추가) ✅ <br />
 
-## Learn More
+<br />
+to see details plz check my figma <br />
+👉  https://www.figma.com/file/DtNSbeeDDst3vZ9INAwiZ7/mobigram?type=design&node-id=0%3A1&mode=design&t=JYIFXaLdqZxet36y-1
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+##### day 02
 
-### Code Splitting
+###### range | 2024.01.05
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+<br />
 
-### Analyzing the Bundle Size
+[ checklist ] <br />
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+LoginPage css 완료하기 ✅ <br />
+LoginPage 이미지 슬라이드 ✅ <br />
+LoginPage 로그인/회원가입 페이지 기능 추가하기 <br />
 
-### Making a Progressive Web App
+<br />
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+이미지 슬라이드 👉 <a href="https://www.npmjs.com/package/react-responsive-carousel"> react + carousel </a> <br />
+다양한 효과가 있는 이미지 슬라이드 👉 <a href="https://swiperjs.com/react"> react + swiper </a> <br />

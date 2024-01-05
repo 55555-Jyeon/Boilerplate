@@ -25,33 +25,33 @@ const DEVICE = {
 const COLORS = {
   primary: {
     /* theme colors */
+    skyBlue: "#67B5FA",
   },
-  font: '#0F0F0F',
-  error: '#EC0707',
-  access: '#28D464',
-  white: '#FFFFFF',
-  black: '#0F0F0F',
+  font: "#0F0F0F",
+  error: "#EC0707",
+  access: "#28D464",
+  white: "#FFFFFF",
+  black: "#0F0F0F",
   gray: {
-    100: '#F1F1F1',
-    200: '#D9D9D9',
-    300: '#C1C1C1',
-    400: '#757575',
-    500: '#5B5B5B',
+    100: "#FAFAFA",
+    200: "#EFEFEF",
+    300: "#CACACA",
+    500: "#828282",
   },
 };
 
 const FONT_SIZE = {
-  extraSmall: '14px',
-  small: '16px',
-  medium: '18px',
-  large: '20px',
-  extraLarge: '32px',
+  extraSmall: "12px",
+  small: "14px",
+  medium: "16px",
+  large: "20px",
 };
 
 const FONT_WEIGHT = {
-  thin: 400,
-  regular: 500,
-  bold: 700,
+  light: 300,
+  regular: 400,
+  medium: 500,
+  semiBold: 600,
 };
 
 const theme = {

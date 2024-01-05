@@ -11,17 +11,30 @@ const BasicButton = ({ variant, size, type, children, ...buttonProps }) => {
 export default BasicButton;
 
 const variantCSS = {
-  primary: css``,
-  secondary: css``,
+  form: css`
+    border-radius: 3px;
+    background-color: ${({ theme }) => theme.COLORS.primary["skyBlue"]};
+    color: ${({ theme }) => theme.COLORS["white"]};
+    font-size: ${({ theme }) => theme.FONT_SIZE["small"]};
+    font-weight: ${({ theme }) => theme.FONT_WEIGHT["semiBold"]};
+  `,
   disabled: css``,
 };
 
-const sizeCSS = {};
+const sizeCSS = {
+  form: css`
+    width: 268px;
+    height: 32px;
+    margin: 12px 0;
+  `,
+};
 
 const Button = styled.button`
   ${({ variant }) => variantCSS[variant]}
   ${({ size }) => sizeCSS[size]}
-    cursor: pointer;
+  outline: none;
+  border: none;
+  cursor: pointer;
   transition: all 0.6s;
 
   &:hover,

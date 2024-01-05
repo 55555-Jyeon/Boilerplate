@@ -1,4 +1,4 @@
-import { css } from 'styled-components';
+import { css } from "styled-components";
 
 export const FlexCenter = css`
   display: flex;
@@ -6,12 +6,12 @@ export const FlexCenter = css`
   align-items: center;
 `;
 
-export const AlignCenter = css`
+export const FlexAlignCenter = css`
   display: flex;
   align-items: center;
 `;
 
-export const JustifyCenter = css`
+export const FlexJustifyCenter = css`
   display: flex;
   align-items: center;
 `;
@@ -21,6 +21,12 @@ export const PositionCenter = css`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+`;
+
+export const PositionXCenter = css`
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%);
 `;
 
 export const PositionYCenter = css`

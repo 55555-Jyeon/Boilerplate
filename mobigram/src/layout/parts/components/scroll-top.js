@@ -1,8 +1,8 @@
-import styled from 'styled-components';
-import { flexCenter } from 'styles/common.style';
-import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import ICON from '../../../img/chevron.png';
+import styled from "styled-components";
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import ICON from "../../../assets/chevron.png";
+import { FlexCenter } from "../../../styles/common.style";
 
 const ScrollTop = () => {
   const [isShowButton, setIsShowButton] = useState(false);
@@ -16,18 +16,18 @@ const ScrollTop = () => {
   };
 
   useEffect(() => {
-    window.addEventListener('scroll', onHandleScroll);
+    window.addEventListener("scroll", onHandleScroll);
 
     return () => {
-      window.removeEventListener('scroll', onHandleScroll);
+      window.removeEventListener("scroll", onHandleScroll);
     };
   }, []);
 
   const onScrollTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  if (window.location.pathname === '/') return null;
+  if (window.location.pathname === "/") return null;
 
   return (
     <Container>
@@ -49,7 +49,7 @@ const Container = styled.div`
 `;
 
 const ToTop = styled.button`
-  ${flexCenter}
+  ${FlexCenter}
   width: 56px;
   height: 56px;
   border-radius: 50%;
