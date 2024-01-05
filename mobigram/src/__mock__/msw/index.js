@@ -1,6 +1,5 @@
 import { http, HttpResponse } from "msw";
 import { faker } from "@faker-js/faker";
-import shortId from "shortid";
 import { createRandomUser, createRandomPost } from "../faker/faker-data";
 
 // MOCK
@@ -17,12 +16,36 @@ const signUpUserData = [
     password: faker.internet.password(),
   },
 ];
-const signInUserData = [];
+const signInUserData = [
+  {
+    email: faker.internet.email(),
+    phoneNumber: faker.phone.number(),
+    nickName: faker.person.firstName(),
+    password: faker.internet.password(),
+  },
+];
 
-export const getSignupUser = http.get("api/signup", () => {
-  return HttpResponse.json([signUpUserData], {
+export const getSignInUser = http.get("api/signup", () => {
+  return HttpResponse.json([signInUserData], {
     status: 200,
   });
+});
+
+export const postSignupUser = http.post("api/signup", async ({ request }) => {
+  const newUser = await request.json();
+  const { phoneNumber, email, nickName, fullName, password } = newUser;
+
+  const userData = {
+    phoneNumber: phoneNumber,
+    email: email,
+    fullName: fullName,
+    nickName: nickName,
+    password: password,
+  };
+
+  signUpUserData.push(userData);
+
+  return HttpResponse.json(signUpUserData, { status: 201 });
 });
 
 export const getUserInfo = http.get("api/user", () => {

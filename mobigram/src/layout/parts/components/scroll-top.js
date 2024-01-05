@@ -1,13 +1,10 @@
 import styled from "styled-components";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import ICON from "../../../assets/chevron.png";
 import { FlexCenter } from "../../../styles/common.style";
 
 const ScrollTop = () => {
   const [isShowButton, setIsShowButton] = useState(false);
-
-  const navigate = useNavigate();
 
   const onHandleScroll = () => {
     const { scrollY } = window;

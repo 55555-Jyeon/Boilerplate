@@ -37,20 +37,27 @@ export const createRandomUser = (count) => {
 };
 
 // random posts
-export const createRandomPost = (count) => {
-  Array(count).fill.map(() => ({
-    User: {
+export const createRandomPost = (count) =>
+  Array(count)
+    .fill()
+    .map(() => ({
       id: shortId.generate(),
-      nickName: faker.person.firstName(),
-      profileImg: faker.image.url(),
-    },
-    location: faker.location.state(),
-    content: faker.lorem.paragraph(),
-    isLiked: false,
-    likedCount: Math.floor(Math.random() * 100),
-    createdAt: faker.date.between(
-      "2023-01-01T00:00:00.000Z",
-      "2023-01-31T00:00:00.000Z"
-    ),
-  }));
-};
+      content: faker.lorem.paragraph(),
+      location: faker.location.state(),
+      User: {
+        id: shortId.generate(),
+        nickName: faker.person.firstName(),
+        profileImg: faker.image.url(),
+      },
+      Post_img: Array(Math.floor(Math.random() * 3) + 1)
+        .fill()
+        .map(() => faker.image.url()),
+      createdAt: faker.date.between(
+        "2023-01-01T00:00:00.000Z",
+        "2023-01-31T00:00:00.000Z"
+      ),
+      isLiked: false,
+      likedCount: Math.floor(Math.random() * 100),
+      isSaved: false,
+      savedCount: Math.floor(Math.random() * 100),
+    }));

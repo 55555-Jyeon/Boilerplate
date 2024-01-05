@@ -23,7 +23,7 @@ const ImageSlider = () => {
         <Carousel
           showArrows={false}
           autoPlay={true}
-          autoPlaySpeed={3000}
+          autoPlaySpeed={2000}
           infiniteLoop={true}
           showThumbs={false}
           showIndicators={false}

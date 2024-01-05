@@ -1,33 +1,50 @@
 import styled from "styled-components";
-import {
-  FlexAlignCenter,
-  FlexCenter,
-  FlexJustifyCenter,
-} from "../../../styles/common.style";
+import { FlexAlignCenter, FlexCenter } from "../../../styles/common.style";
 import LOGO from "../../../assets/mobigram.png";
 import BasicInput from "../../../components/input";
 import BasicButton from "../../../components/button";
 import Instagram from "../../../assets/instagram.png";
 import { useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import { SignInSchema } from "../../../consts/schema";
 
 const SignInForm = () => {
   const navigate = useNavigate();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    resolver: yupResolver(SignInSchema),
+  });
 
-  // toSignUp
+  const onSubmit = (data) => {
+    alert(JSON.stringify(data));
+  };
+
+  // onClick SignUp button : navigate to sign-up-page
   const navSignUp = () => {
     navigate("/sign-up");
   };
+
   return (
     <Wrapper>
       <Container>
-        <Form>
+        <Form onSubmit={handleSubmit(onSubmit)}>
           <Logo src={LOGO} />
           <BasicInput
             variant={"form"}
             size={"form"}
             placeholder="Phone Number, username, or email"
+            required
           />
-          <BasicInput variant={"form"} size={"form"} placeholder="Password" />
+          <BasicInput
+            variant={"form"}
+            size={"form"}
+            placeholder="Password"
+            required
+          />
           <BasicButton variant={"form"} size={"form"}>
             Log in
           </BasicButton>
