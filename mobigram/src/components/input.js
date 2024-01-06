@@ -1,5 +1,5 @@
 import { styled, css } from "styled-components";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import CONFIRM from "../assets/confirm.png";
 import ERROR from "../assets/mismatch.png";
 import { REGEXP } from "../constants/regexp";
@@ -11,14 +11,14 @@ const BasicInput = ({
   size,
   type,
   register,
+  isDirty,
   errors,
-  defaultValue,
+  defaultValues,
   ...inputProps
 }) => {
   // input:focus + label, input:valid + label
   const [isFocused, setFocused] = useState(false);
   const [isValid, setIsValid] = useState(false);
-  const [isError, setIsError] = useState(false);
 
   const handleFocus = () => {
     setFocused(true);
@@ -26,12 +26,6 @@ const BasicInput = ({
   const handleInputChange = (e) => {
     setIsValid(true);
   };
-
-  useEffect(() => {
-    if (isValid) {
-      setFocused(true);
-    }
-  }, [isValid]);
 
   return (
     <Container>
@@ -54,7 +48,19 @@ const BasicInput = ({
             },
           })}
         />
-        {errors && <CheckValid src={ERROR} />}
+
+        {errors ? (
+          <CheckValid src={ERROR} className={!isFocused ? "hidden" : ""} />
+        ) : (
+          <CheckValid
+            src={CONFIRM}
+            className={
+              (defaultValues === null && isFocused) || !isFocused
+                ? "hidden"
+                : ""
+            }
+          />
+        )}
       </InputBox>
     </Container>
   );
@@ -120,5 +126,9 @@ const CheckValid = styled.img`
   left: 90%;
   width: 20px;
   height: 20px;
-  /*  visibility: hidden; */
+  visibility: visible;
+
+  &.hidden {
+    visibility: hidden;
+  }
 `;

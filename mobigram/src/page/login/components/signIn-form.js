@@ -14,7 +14,8 @@ const SignInForm = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    getValues,
+    formState: { errors, isDirty },
   } = useForm({
     mode: "onChange",
     defaultValues: {
@@ -24,9 +25,8 @@ const SignInForm = () => {
   });
 
   const onSubmit = (data) => {
-    console.log(data);
     setLocalStorageUserInfo(data.Username);
-    navigate("/home");
+    navigate("/mobi");
   };
 
   // 로컬 스토리지에 Username 값 저장
@@ -45,19 +45,18 @@ const SignInForm = () => {
         <Form onSubmit={handleSubmit(onSubmit)}>
           <Logo src={LOGO} />
           {SIGNIN.map((item, idx) => {
-            const { label, name } = item;
+            const { label, name, type } = item;
             return (
-              <>
-                <BasicInput
-                  key={idx}
-                  label={label}
-                  name={name}
-                  register={register}
-                  errors={errors[label]}
-                  variant={"form"}
-                  size={"form"}
-                />
-              </>
+              <BasicInput
+                key={idx}
+                label={label}
+                name={name}
+                type={type}
+                register={register}
+                errors={errors[label]}
+                variant={"form"}
+                size={"form"}
+              />
             );
           })}
           <BasicButton variant={"form"} size={"form"}>

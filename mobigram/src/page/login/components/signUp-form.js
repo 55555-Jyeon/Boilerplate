@@ -14,14 +14,25 @@ const SignUpForm = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors, isValid },
+    formState: { errors },
   } = useForm({
     mode: "onChange",
+    defaultValues: {
+      email: "",
+      FullName: "",
+      Username: "",
+      Password: "",
+    },
   });
 
   const onSubmit = (data) => {
-    alert(JSON.stringify(data));
+    setLocalStorageUserInfo(data.email, data.FullName, data.Username);
     navigate("/");
+  };
+
+  // 로컬 스토리지에 UserInfo 값 저장
+  const setLocalStorageUserInfo = (info) => {
+    localStorage.setItem("formInfo", JSON.stringify(info));
   };
 
   // to login
@@ -46,14 +57,15 @@ const SignUpForm = () => {
           </LineGroup>
           <Inputs>
             {SIGNUP.map((item, idx) => {
-              const { label, name } = item;
+              const { label, name, type } = item;
               return (
                 <BasicInput
                   key={idx}
                   label={label}
                   name={name}
+                  type={type}
                   register={register}
-                  errors={errors}
+                  errors={errors[label]}
                   variant={"form"}
                   size={"form"}
                 />
