@@ -1,5 +1,4 @@
 import { styled, css } from "styled-components";
-import { FlexJustifyCenter } from "../styles/common.style";
 import { useEffect, useState } from "react";
 import CONFIRM from "../assets/confirm.png";
 import ERROR from "../assets/mismatch.png";
@@ -24,7 +23,6 @@ const BasicInput = ({
   const handleFocus = () => {
     setFocused(true);
   };
-
   const handleInputChange = (e) => {
     setIsValid(true);
   };
@@ -73,11 +71,10 @@ const variantCSS = {
 
 const sizeCSS = {
   form: css`
-    width: 256px;
-    height: 30px;
-    margin: 3px 0;
+    min-width: 256px;
+    min-height: 30px;
+
     padding-left: 10px;
-    padding-top: 5px;
   `,
 };
 
@@ -87,7 +84,8 @@ const Container = styled.div`
 `;
 
 const InputBox = styled.div`
-  ${FlexJustifyCenter}
+  height: 50px;
+  display: flex;
   flex-direction: column;
 `;
 
@@ -118,8 +116,9 @@ const Input = styled.input`
 
 const CheckValid = styled.img`
   position: relative;
-  bottom: 42%;
+  bottom: 53%;
   left: 90%;
   width: 20px;
   height: 20px;
+  /*  visibility: hidden; */
 `;

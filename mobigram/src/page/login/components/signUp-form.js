@@ -15,7 +15,6 @@ const SignUpForm = () => {
     register,
     handleSubmit,
     formState: { errors, isValid },
-    getValues,
   } = useForm({
     mode: "onChange",
   });
@@ -31,45 +30,59 @@ const SignUpForm = () => {
   };
 
   return (
-    <Container>
-      <Form onSubmit={handleSubmit(onSubmit)}>
-        <Logo src={LOGO} />
-        <p>Sign up to see photos and videos from your friends.</p>
-        <SNSlogin>
-          <ICON src={Instagram} />
-          <p>Log in with Instagram</p>
-        </SNSlogin>
-        <LineGroup>
-          <Line />
-          <p>OR</p>
-          <Line />
-        </LineGroup>
-        {SIGNUP.map((item, idx) => {
-          const { label, name } = item;
-          return (
-            <BasicInput
-              key={idx}
-              label={label}
-              name={name}
-              register={register}
-              errors={errors}
-              variant={"form"}
-              size={"form"}
-            />
-          );
-        })}
-        <BasicButton variant={"form"} size={"form"}>
-          Log in
-        </BasicButton>
-      </Form>
-      <SignUpBox>
-        <p>Have an account?</p>
-        <p onClick={navSignIn}>Log In</p>
-      </SignUpBox>
-    </Container>
+    <Wrapper>
+      <Container>
+        <Form onSubmit={handleSubmit(onSubmit)}>
+          <Logo src={LOGO} />
+          <p>Sign up to see photos and videos from your friends.</p>
+          <SNSlogin>
+            <ICON src={Instagram} />
+            <p>Log in with Instagram</p>
+          </SNSlogin>
+          <LineGroup>
+            <Line />
+            <p>OR</p>
+            <Line />
+          </LineGroup>
+          <Inputs>
+            {SIGNUP.map((item, idx) => {
+              const { label, name } = item;
+              return (
+                <BasicInput
+                  key={idx}
+                  label={label}
+                  name={name}
+                  register={register}
+                  errors={errors}
+                  variant={"form"}
+                  size={"form"}
+                />
+              );
+            })}
+          </Inputs>
+          <BasicButton variant={"form"} size={"form"}>
+            Log in
+          </BasicButton>
+        </Form>
+        <SignUpBox>
+          <p>Have an account?</p>
+          <p onClick={navSignIn}>Log In</p>
+        </SignUpBox>
+      </Container>
+    </Wrapper>
   );
 };
 export default SignUpForm;
+
+const Wrapper = styled.div`
+  width: 100vw;
+  height: 92vh;
+  overflow: hidden;
+
+  & > button {
+    margin-top: 20px;
+  }
+`;
 
 const Container = styled.div`
   position: absolute;
@@ -121,6 +134,10 @@ const Line = styled.div`
   width: 113px;
   height: 1px;
   background-color: ${({ theme }) => theme.COLORS.gray[300]};
+`;
+
+const Inputs = styled.div`
+  margin: 10px 0;
 `;
 
 const SNSlogin = styled.div`

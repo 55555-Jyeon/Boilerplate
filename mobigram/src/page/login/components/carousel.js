@@ -50,12 +50,12 @@ const Container = styled.div`
 `;
 
 const Iphone = styled.img`
-  width: 36%;
-  margin-top: 2%;
+  width: 40%;
+  margin-top: 4%;
 `;
 const Slides = styled.div`
   position: absolute;
-  width: 15%;
-  margin: 0 0 0.8% 5.8%;
+  width: 16.5%;
+  margin: 0.2% 0 0 6.5%;
   transition: all ease-in-out;
 `;

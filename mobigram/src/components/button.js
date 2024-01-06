@@ -23,8 +23,8 @@ const variantCSS = {
 
 const sizeCSS = {
   form: css`
-    width: 268px;
-    height: 32px;
+    min-width: 268px;
+    min-height: 32px;
     margin: 12px 0;
   `,
 };
