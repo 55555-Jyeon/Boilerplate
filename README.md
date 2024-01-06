@@ -119,20 +119,20 @@ mobi community에서 pair(페어)와 함께 진행했던 sessions...  <br />
     <td>day 02</td>
     <td>2024-01-05</td>
     <td rowspan="2">login page</td>
-    <td rowspan="2"></td>
+    <td rowspan="2">✔️</td>
     <td>carousel & msw worker issue</td>
   </tr>
   <tr>
     <td>day 03</td>
     <td>2024-01-06</td>
-    <td></td>
+    <td>RHF issue</td>
   </tr>
   <tr>
     <td>day 04</td>
     <td>2024-01-07</td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>home page</td>
+    <td>✔️</td>
+    <td>side menubar library</td>
   </tr>
   <tr>
     <td>day 05</td>
@@ -202,7 +202,7 @@ React Hook Form + yup을 활용한 로그인/회원가입 페이지 만들기
 
 LoginPage css 완료하기 ✅ <br />
 LoginPage 이미지 슬라이드 ✅ <br />
-LoginPage 로그인/회원가입 페이지 기능 (feat. RHF) <br />
+LoginPage 로그인/회원가입 페이지 기능 (feat. RHF) ✅ <br />
 
 <br />
 
@@ -241,5 +241,27 @@ RHF과 yup을 활용해 만든 회원가입 로직
 </p>
 
 <br />
+
+---
+
+
+##### day 04 ~ 05
+
+###### range | 2024.01.07 ~ 2024.01.08
+
+home page : Aside Menubar + infinite scroll
+
+<br />
+
+[ checklist ] <br />
+
+Aside Menubar ✅ <br />
+aside - main - layout - footer : position 정렬하기 ✅ <br />
+one post 컴포넌트 만들어서 infinite scroll  <br />
+
+<br />
+
+side menubar 1 👉 <a href="https://www.npmjs.com/package/@trendmicro/react-sidenav"> react-sidenav </a> <br />
+side menubar 2 👉 <a href="https://reactjsexample.com/minimal-side-navigation-component-for-react/"> minimal-side-navigation </a> <br />
 
 ---
