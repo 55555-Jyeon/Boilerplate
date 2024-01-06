@@ -73,7 +73,7 @@ const SignUpForm = () => {
             })}
           </Inputs>
           <BasicButton variant={"form"} size={"form"}>
-            Log in
+            Sign Up
           </BasicButton>
         </Form>
         <SignUpBox>

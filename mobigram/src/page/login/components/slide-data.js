@@ -24,4 +24,64 @@ export const SlideData = [
     alt: "image4",
     url: slide04,
   },
+  {
+    label: "slide 01",
+    alt: "image1",
+    url: slide01,
+  },
+  {
+    label: "slide 02",
+    alt: "image2",
+    url: slide02,
+  },
+  {
+    label: "slide 03",
+    alt: "image3",
+    url: slide03,
+  },
+  {
+    label: "slide 04",
+    alt: "image4",
+    url: slide04,
+  },
+  {
+    label: "slide 01",
+    alt: "image1",
+    url: slide01,
+  },
+  {
+    label: "slide 02",
+    alt: "image2",
+    url: slide02,
+  },
+  {
+    label: "slide 03",
+    alt: "image3",
+    url: slide03,
+  },
+  {
+    label: "slide 04",
+    alt: "image4",
+    url: slide04,
+  },
+  {
+    label: "slide 01",
+    alt: "image1",
+    url: slide01,
+  },
+  {
+    label: "slide 02",
+    alt: "image2",
+    url: slide02,
+  },
+  {
+    label: "slide 03",
+    alt: "image3",
+    url: slide03,
+  },
+  {
+    label: "slide 04",
+    alt: "image4",
+    url: slide04,
+  },
 ];
