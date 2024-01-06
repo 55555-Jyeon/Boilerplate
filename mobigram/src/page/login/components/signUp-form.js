@@ -1,21 +1,38 @@
 import styled from "styled-components";
 import { FlexAlignCenter, FlexCenter } from "../../../styles/common.style";
-import LOGO from "../../../assets/mobigram.png";
+import LOGO from "../../../assets/logo.png";
 import BasicInput from "../../../components/input";
 import BasicButton from "../../../components/button";
 import Instagram from "../../../assets/instagram.png";
 import { useNavigate } from "react-router-dom";
+import { useForm } from "react-hook-form";
+import { SIGNUP } from "../../../constants/requirements";
 
 const SignUpForm = () => {
   const navigate = useNavigate();
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isValid },
+    getValues,
+  } = useForm({
+    mode: "onChange",
+  });
+
+  const onSubmit = (data) => {
+    alert(JSON.stringify(data));
+    navigate("/");
+  };
 
   // to login
   const navSignIn = () => {
     navigate("/");
   };
+
   return (
     <Container>
-      <Form>
+      <Form onSubmit={handleSubmit(onSubmit)}>
         <Logo src={LOGO} />
         <p>Sign up to see photos and videos from your friends.</p>
         <SNSlogin>
@@ -27,14 +44,20 @@ const SignUpForm = () => {
           <p>OR</p>
           <Line />
         </LineGroup>
-        <BasicInput
-          variant={"form"}
-          size={"form"}
-          placeholder="Mobile Number or email"
-        />
-        <BasicInput variant={"form"} size={"form"} placeholder="Full Name" />
-        <BasicInput variant={"form"} size={"form"} placeholder="Username" />
-        <BasicInput variant={"form"} size={"form"} placeholder="Password" />
+        {SIGNUP.map((item, idx) => {
+          const { label, name } = item;
+          return (
+            <BasicInput
+              key={idx}
+              label={label}
+              name={name}
+              register={register}
+              errors={errors}
+              variant={"form"}
+              size={"form"}
+            />
+          );
+        })}
         <BasicButton variant={"form"} size={"form"}>
           Log in
         </BasicButton>

@@ -13,24 +13,21 @@ export const FlexAlignCenter = css`
 
 export const FlexJustifyCenter = css`
   display: flex;
-  align-items: center;
+  justify-content: center;
 `;
 
 export const PositionCenter = css`
-  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 `;
 
 export const PositionXCenter = css`
-  position: absolute;
   top: 50%;
   transform: translateX(-50%);
 `;
 
 export const PositionYCenter = css`
-  position: absolute;
   left: 50%;
   transform: translateY(-50%);
 `;

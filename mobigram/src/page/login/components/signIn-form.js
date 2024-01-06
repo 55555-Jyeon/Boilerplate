@@ -1,29 +1,40 @@
 import styled from "styled-components";
 import { FlexAlignCenter, FlexCenter } from "../../../styles/common.style";
-import LOGO from "../../../assets/mobigram.png";
+import LOGO from "../../../assets/logo.png";
 import BasicInput from "../../../components/input";
 import BasicButton from "../../../components/button";
 import Instagram from "../../../assets/instagram.png";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
-import { yupResolver } from "@hookform/resolvers/yup";
-import { SignInSchema } from "../../../consts/schema";
+import { SIGNIN } from "../../../constants/requirements";
 
 const SignInForm = () => {
   const navigate = useNavigate();
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm({
-    resolver: yupResolver(SignInSchema),
+    mode: "onChange",
+    defaultValues: {
+      Username: "",
+      Password: "",
+    },
   });
 
   const onSubmit = (data) => {
-    alert(JSON.stringify(data));
+    console.log(data);
+    setLocalStorageUserInfo(data.Username);
+    navigate("/home");
   };
 
-  // onClick SignUp button : navigate to sign-up-page
+  // 로컬 스토리지에 Username 값 저장
+  const setLocalStorageUserInfo = (info) => {
+    localStorage.setItem("formInfo", JSON.stringify(info));
+  };
+
+  // onClick : 회원가입 페이지로 이동
   const navSignUp = () => {
     navigate("/sign-up");
   };
@@ -33,18 +44,22 @@ const SignInForm = () => {
       <Container>
         <Form onSubmit={handleSubmit(onSubmit)}>
           <Logo src={LOGO} />
-          <BasicInput
-            variant={"form"}
-            size={"form"}
-            placeholder="Phone Number, username, or email"
-            required
-          />
-          <BasicInput
-            variant={"form"}
-            size={"form"}
-            placeholder="Password"
-            required
-          />
+          {SIGNIN.map((item, idx) => {
+            const { label, name } = item;
+            return (
+              <>
+                <BasicInput
+                  key={idx}
+                  label={label}
+                  name={name}
+                  register={register}
+                  errors={errors[label]}
+                  variant={"form"}
+                  size={"form"}
+                />
+              </>
+            );
+          })}
           <BasicButton variant={"form"} size={"form"}>
             Log in
           </BasicButton>

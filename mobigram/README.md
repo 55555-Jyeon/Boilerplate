@@ -125,7 +125,7 @@ React Hook Form + yup을 활용한 로그인/회원가입 페이지 만들기
 
 LoginPage css 완료하기 ✅ <br />
 LoginPage 이미지 슬라이드 ✅ <br />
-LoginPage 로그인/회원가입 페이지 기능 (feat. RHF) <br />
+LoginPage 로그인/회원가입 페이지 (feat. RHF) ✅ <br />
 
 <br />
 
