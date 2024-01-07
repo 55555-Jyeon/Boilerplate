@@ -36,22 +36,32 @@ mobi community에서 pair(페어)와 함께 진행했던 sessions... <br />
 협업하며 진행했던 과정들은 아무래도 혼자 이뤄낸 것들이 아니기 때문에 온전히 나의 실력이 되지 않았다고 생각합니다. <br />
 여태까지 배웠던 부분들 중 일부를 총집합해 혼자 만들어보는 토이 프로젝트에는 다른 분들과 함께 진행했던 내용들이 녹아 있습니다. <br />
 
+<br />
+
 - MovieTrailer : infinite scroll <br />
-  강의 도중 Dainel 님, Noel 님, Ann 님과 함께 open API를 활용해 만들었던 사이트 <br />
-  당시 Dainel 님이 하셨던 무한스크롤 적용해보기 <br />
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 강의 도중 Dainel 님, Noel 님, Ann 님과 함께 open API를 활용해 만들었던 사이트 <br />
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 당시 Dainel 님이 하셨던 무한스크롤 적용해보기 <br />
+
+<br />
 
 - MMM : MSW + faker.js <br />
-  MSW와 faker 라이브러리를 활용해 목데이터를 만들어 백엔드 데이터 대신 사용해보기 <br />
-  reactQuery 사용하기 <br />
-  2페어가 진행했던 메인 배너 슬라이드 적용해보기 <br />
-  협업 시 사용하지 못했던 JS Docs를 활용해보기 <br />
-  1페어가 진행했던 Error Boundary와 Suspense 적용해보기 <br />
-  Dainel 님이 진행한 채팅, socket 공부해서 적용해보기 <br />
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; MSW와 faker 라이브러리를 활용해 목데이터를 만들어 백엔드 데이터 대신 사용해보기 <br />
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; reactQuery 사용하기 <br />
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2페어가 진행했던 메인 배너 슬라이드 적용해보기 <br />
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2페어가 진행했던 검색 기능 적용해보기 <br />
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 협업 시 사용하지 못했던 JS Docs를 활용해보기 <br />
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1페어가 진행했던 Error Boundary와 Suspense 적용해보기 <br />
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Dainel 님이 진행한 채팅, socket 공부하기 👉 가능하다면 적용까지 해보기 👀 <br />
+
+  <br />
+
 - mobi 2th : UI library <br />
-  2주차에 Kimi 님, Ann 님과 함께 진행했던 UI 라이브러리를 실제 미니 프로젝트에 적용해보기 <br />
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2주차에 Kimi 님, Ann 님과 함께 진행했던 UI 라이브러리를 실제 미니 프로젝트에 적용해보기 <br />
+
+<br />
 
 - mobi 3th : RHF + yup <br />
-  3주차에 Dainel 님, Jack 님과 함께 했던 react-hook-form과 yup을 활용한 form 만들기 <br />
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 3주차에 Dainel 님, Jack 님과 함께 했던 react-hook-form과 yup을 활용한 form 만들기 <br />
 
 <br />
 
@@ -68,6 +78,10 @@ mobi community에서 pair(페어)와 함께 진행했던 sessions... <br />
     <td>[ complete ]</td>
     <td>완료</td>
   </tr>
+  <tr>
+    <td>[ edit details ]</td>
+    <td>디자인이나 코드 등 세세한 부분 수정</td>
+  </tr>
 </table>
 
 #### 🆕 new issues
@@ -79,7 +93,7 @@ mobi community에서 pair(페어)와 함께 진행했던 sessions... <br />
   </tr>
   <tr>
     <td>🟡</td>
-    <td>resolving ...</td>
+    <td>postpone small issue</td>
   </tr>
   <tr>
     <td>🟢</td>
@@ -146,6 +160,27 @@ mobi community에서 pair(페어)와 함께 진행했던 sessions... <br />
   <tr>
     <td>day 07</td>
     <td>2024-01-10</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>day 08</td>
+    <td>2024-01-11</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>day 09</td>
+    <td>2024-01-12</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>day 10</td>
+    <td>2024-01-12</td>
     <td></td>
     <td></td>
     <td></td>
@@ -251,12 +286,75 @@ home page : Aside Menubar + infinite scroll
 [ checklist ] <br />
 
 Aside Menubar ✅ <br />
-aside - main - layout - footer : position 정렬하기 ✅ <br />
+로그인 전후 페이지의 각각 레이아웃 구조 완성하기 <br />
 one post 컴포넌트 만들어서 infinite scroll <br />
 
 <br />
 
 side menubar 1 👉 <a href="https://www.npmjs.com/package/@trendmicro/react-sidenav"> react-sidenav </a> <br />
 side menubar 2 👉 <a href="https://reactjsexample.com/minimal-side-navigation-component-for-react/"> minimal-side-navigation </a> <br />
+
+---
+
+##### day 00
+
+###### range | 2024.01.00
+
+??? page : function
+
+<br />
+
+[ checklist ] <br />
+
+ <br />
+ <br />
+ <br />
+
+<br />
+
+library 1 👉 <a href=""> ref 1 </a> <br />
+library 2 👉 <a href=""> ref 2 </a> <br />
+
+---
+
+##### day 00
+
+###### range | 2024.01.00
+
+??? page : function
+
+<br />
+
+[ checklist ] <br />
+
+ <br />
+ <br />
+ <br />
+
+<br />
+
+library 1 👉 <a href=""> ref 1 </a> <br />
+library 2 👉 <a href=""> ref 2 </a> <br />
+
+---
+
+##### day 00
+
+###### range | 2024.01.00
+
+??? page : function
+
+<br />
+
+[ checklist ] <br />
+
+ <br />
+ <br />
+ <br />
+
+<br />
+
+library 1 👉 <a href=""> ref 1 </a> <br />
+library 2 👉 <a href=""> ref 2 </a> <br />
 
 ---
