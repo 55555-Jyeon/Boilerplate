@@ -1,8 +1,7 @@
 import { styled, css } from "styled-components";
 import { useState } from "react";
-import CONFIRM from "../assets/confirm.png";
-import ERROR from "../assets/mismatch.png";
 import { REGEXP } from "../constants/regexp";
+import { FormIcon } from "../assets";
 
 const BasicInput = ({
   label,
@@ -48,12 +47,14 @@ const BasicInput = ({
             },
           })}
         />
-
         {errors ? (
-          <CheckValid src={ERROR} className={!isFocused ? "hidden" : ""} />
+          <CheckValid
+            src={FormIcon.error}
+            className={!isFocused ? "hidden" : ""}
+          />
         ) : (
           <CheckValid
-            src={CONFIRM}
+            src={FormIcon.confirm}
             className={
               (defaultValues === null && isFocused) || !isFocused
                 ? "hidden"

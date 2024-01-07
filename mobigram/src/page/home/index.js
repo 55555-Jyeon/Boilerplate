@@ -1,11 +1,13 @@
 import styled from "styled-components";
-import SideMenubar from "../../layout/parts/side-menu";
+import OnePost from "../../components/one-post";
+import { FlexJustifyCenter } from "../../styles/common.style";
 
 const HomePage = () => {
   return (
     <Container>
-      <SideMenubar />
-      <Main>main page</Main>
+      <Contents>
+        <OnePost />
+      </Contents>
     </Container>
   );
 };
@@ -13,12 +15,11 @@ const HomePage = () => {
 export default HomePage;
 
 const Container = styled.div`
-  width: 100vw;
-  overflow-x: hidden;
+  width: calc(100% - 335px);
 `;
-const Main = styled.div`
+const Contents = styled.div`
   width: 100%;
   height: 2000px;
-  background-color: aliceblue;
   margin-left: 335px;
+  ${FlexJustifyCenter}
 `;

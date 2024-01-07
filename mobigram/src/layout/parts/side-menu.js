@@ -1,51 +1,57 @@
 import { Navigation } from "react-minimal-side-navigation";
 import styled from "styled-components";
-import LOGO from "../../assets/logo.png";
-import HOME from "../../assets/home.png";
-import EXPLORE from "../../assets/explore.png";
-import SEND from "../../assets/send.png";
-import LIKE from "../../assets/like.png";
-import PROFILE from "../../assets/default-profile.png";
-import MORE from "../../assets/more.png";
 import { FlexAlignCenter, FlexCenter } from "../../styles/common.style";
+import { useNavigate } from "react-router-dom";
+import { LOGO, MenubarIcon } from "../../assets";
 
 const SideMenubar = () => {
+  const navigate = useNavigate();
   return (
     <Container>
-      <MenuBar onSelect={(selected) => console.log(selected)}>
-        <Logo src={LOGO} />
+      <MenuBar>
+        <Logo src={LOGO.logo} />
         <Navigation
-          onSelect={() => {}}
+          activeItemId="mobi/"
+          onSelect={({ itemId }) => {
+            navigate("/" + itemId);
+          }}
           items={[
             {
               title: "Home",
               itemId: "mobi/",
-              elemBefore: () => <Icon src={HOME} />,
+              elemBefore: () => <Icon src={MenubarIcon.home} />,
             },
             {
               title: "Explore",
               itemId: "mobi/explore",
-              elemBefore: () => <Icon src={EXPLORE} />,
+              elemBefore: () => <Icon src={MenubarIcon.explore} />,
             },
             {
               title: "Message",
               itemId: "mobi/message",
-              elemBefore: () => <Icon src={SEND} />,
+              elemBefore: () => <Icon src={MenubarIcon.send} />,
             },
             {
               title: "Notifications",
-              itemId: "mobi/notify",
-              elemBefore: () => <Icon src={LIKE} />,
+              itemId: "mobi/",
+              elemBefore: () => <Icon src={MenubarIcon.like} />,
             },
             {
               title: "Profile",
               itemId: "mobi/my-page",
-              elemBefore: () => <Icon src={PROFILE} />,
+              elemBefore: () => <Icon src={MenubarIcon.defaultProfile} />,
             },
             {
               title: "More",
-              itemId: "",
-              elemBefore: () => <Icon src={MORE} />,
+              itemId: "mobi/",
+              elemBefore: () => <Icon src={MenubarIcon.more} />,
+              /*               subNav: [
+                {
+                  title: "settings",
+                  itemId: "",
+                  elemBefore: () => <Icon src={""} />,
+                },
+              ], */
             },
           ]}
         />
@@ -92,10 +98,15 @@ const Container = styled.div`
 
           & > div {
             padding-left: 24px;
+            // nav title
             & > span {
               height: 42px;
               display: inline-block;
               ${FlexAlignCenter}
+
+              &.selected {
+                font-weight: ${({ theme }) => theme.FONT_WEIGHT["semiBold"]};
+              }
             }
           }
         }

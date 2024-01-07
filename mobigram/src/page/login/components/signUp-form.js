@@ -1,12 +1,11 @@
 import styled from "styled-components";
 import { FlexAlignCenter, FlexCenter } from "../../../styles/common.style";
-import LOGO from "../../../assets/logo.png";
 import BasicInput from "../../../components/input";
 import BasicButton from "../../../components/button";
-import Instagram from "../../../assets/instagram.png";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { SIGNUP } from "../../../constants/requirements";
+import { FormIcon, LOGO } from "../../../assets";
 
 const SignUpForm = () => {
   const navigate = useNavigate();
@@ -44,10 +43,10 @@ const SignUpForm = () => {
     <Wrapper>
       <Container>
         <Form onSubmit={handleSubmit(onSubmit)}>
-          <Logo src={LOGO} />
+          <Logo src={LOGO.logo} />
           <p>Sign up to see photos and videos from your friends.</p>
           <SNSlogin>
-            <ICON src={Instagram} />
+            <ICON src={FormIcon.instagram} />
             <p>Log in with Instagram</p>
           </SNSlogin>
           <LineGroup>

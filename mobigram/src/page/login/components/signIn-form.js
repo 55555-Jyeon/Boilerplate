@@ -1,12 +1,11 @@
 import styled from "styled-components";
 import { FlexAlignCenter, FlexCenter } from "../../../styles/common.style";
-import LOGO from "../../../assets/logo.png";
 import BasicInput from "../../../components/input";
 import BasicButton from "../../../components/button";
-import Instagram from "../../../assets/instagram.png";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { SIGNIN } from "../../../constants/requirements";
+import { FormIcon, LOGO } from "../../../assets";
 
 const SignInForm = () => {
   const navigate = useNavigate();
@@ -14,8 +13,7 @@ const SignInForm = () => {
   const {
     register,
     handleSubmit,
-    getValues,
-    formState: { errors, isDirty },
+    formState: { errors },
   } = useForm({
     mode: "onChange",
     defaultValues: {
@@ -43,7 +41,7 @@ const SignInForm = () => {
     <Wrapper>
       <Container>
         <Form onSubmit={handleSubmit(onSubmit)}>
-          <Logo src={LOGO} />
+          <Logo src={LOGO.logo} />
           {SIGNIN.map((item, idx) => {
             const { label, name, type } = item;
             return (
@@ -68,7 +66,7 @@ const SignInForm = () => {
             <Line />
           </LineGroup>
           <SNSlogin>
-            <ICON src={Instagram} />
+            <ICON src={FormIcon.instagram} />
             <p>Log in with Instagram</p>
           </SNSlogin>
           <p>Forgot password?</p>

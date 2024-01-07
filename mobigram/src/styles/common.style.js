@@ -16,6 +16,13 @@ export const FlexJustifyCenter = css`
   justify-content: center;
 `;
 
+export const FlexLeft = css`
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+`;
+
 export const PositionCenter = css`
   top: 50%;
   left: 50%;
