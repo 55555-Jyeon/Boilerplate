@@ -1,21 +1,52 @@
 import styled from "styled-components";
 import { FlexAlignCenter, FlexCenter, FlexLeft } from "../styles/common.style";
 import { PostIcon } from "../assets";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/effect-fade";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Pagination, Navigation, HashNavigation } from "swiper/modules";
 
 const OnePost = () => {
   return (
     <Container>
       <Header>
         <UserInfo>
-          <img src={PostIcon.defaultProfile} />
+          {/*  <img src={PostIcon.defaultProfile} /> */}
+          <img src={""} />
           <div>
-            <span>user nickname</span>
-            <span>post locaton</span>
+            <span>{}</span>
+            <span>{}</span>
           </div>
         </UserInfo>
         <img src={PostIcon.more} />
       </Header>
-      <ImageBox></ImageBox>
+      <ImageBox>
+        <Swiper
+          spaceBetween={30}
+          hashNavigation={{
+            watchState: true,
+          }}
+          pagination={{
+            clickable: true,
+          }}
+          navigation={true}
+          modules={[Pagination, Navigation, HashNavigation]}
+          className="mySwiper"
+        >
+          {/* {mock.postImages[0].map((_, idx) => {
+            <SwiperSlide key={idx} data-hash={idx}>
+              {mock.postImages}
+            </SwiperSlide>;
+          })} */}
+          <SwiperSlide data-hash="slide1">Slide 1</SwiperSlide>
+          <SwiperSlide data-hash="slide2">Slide 2</SwiperSlide>
+          <SwiperSlide data-hash="slide3">Slide 3</SwiperSlide>
+          <SwiperSlide data-hash="slide4">Slide 4</SwiperSlide>
+          <SwiperSlide data-hash="slide5">Slide 5</SwiperSlide>
+        </Swiper>
+      </ImageBox>
       <Icons>
         <div>
           <img src={PostIcon.like} />
@@ -89,6 +120,23 @@ const ImageBox = styled.div`
   height: 470px;
   ${FlexCenter}
   background-color: #fafafa;
+
+  // swiper
+  & > div {
+    &.swiper-button-prev:after,
+    &.swiper-button-next:after {
+      /* font family 로 아이콘 사용 중 */
+    }
+
+    // slide indicators (pagination)
+    &.swiper-pagination {
+      & > span {
+        &.swiper-pagination-bullet-active {
+          background-color: ${({ theme }) => theme.COLORS["white"]};
+        }
+      }
+    }
+  }
 `;
 const Icons = styled.div`
   width: 100%;

@@ -10,21 +10,20 @@ import MobiLayout from "../layout/member-layout";
 
 const router = createBrowserRouter([
   {
-    path: "/",
     element: <Layout />,
     children: [
       { path: "/", element: <GreetingPage /> },
       { path: "/sign-up", element: <SignUpPage /> },
     ],
   },
+
   {
-    path: "/mobi",
     element: <MobiLayout />,
     children: [
-      { path: "/mobi", element: <HomePage /> },
-      { path: "/mobi/explore", element: <SearchPage /> },
-      { path: "/mobi/message", element: <ChattingPage /> },
-      { path: "/mobi/my-page", element: <MyPage /> },
+      { path: "/home", element: <HomePage /> },
+      { path: "/explore", element: <SearchPage /> },
+      { path: "/message", element: <ChattingPage /> },
+      { path: "/my-page", element: <MyPage /> },
     ],
   },
 ]);

@@ -11,39 +11,39 @@ const SideMenubar = () => {
       <MenuBar>
         <Logo src={LOGO.logo} />
         <Navigation
-          activeItemId="mobi/"
+          activeItemId="/home"
           onSelect={({ itemId }) => {
             navigate("/" + itemId);
           }}
           items={[
             {
               title: "Home",
-              itemId: "mobi/",
+              itemId: "home",
               elemBefore: () => <Icon src={MenubarIcon.home} />,
             },
             {
               title: "Explore",
-              itemId: "mobi/explore",
+              itemId: "explore",
               elemBefore: () => <Icon src={MenubarIcon.explore} />,
             },
             {
               title: "Message",
-              itemId: "mobi/message",
+              itemId: "message",
               elemBefore: () => <Icon src={MenubarIcon.send} />,
             },
             {
               title: "Notifications",
-              itemId: "mobi/",
+              itemId: "notify",
               elemBefore: () => <Icon src={MenubarIcon.like} />,
             },
             {
               title: "Profile",
-              itemId: "mobi/my-page",
+              itemId: "my-page",
               elemBefore: () => <Icon src={MenubarIcon.defaultProfile} />,
             },
             {
               title: "More",
-              itemId: "mobi/",
+              itemId: "more",
               elemBefore: () => <Icon src={MenubarIcon.more} />,
               /*               subNav: [
                 {

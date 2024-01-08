@@ -13,6 +13,9 @@ npm install shortid
 npm install msw --save-dev
 npx msw init ./public --save
 
+📌  react-query
+npm i react-query
+
 ```
 
 <br />
@@ -23,3 +26,4 @@ more infos... 👀 <br />
 
 faker 👉 https://fakerjs.dev/guide/usage.html <br />
 msw 👉 https://mswjs.io/docs/getting-started <br />
+react-query 👉 https://tanstack.com/query/v3/docs/react/installation <br />

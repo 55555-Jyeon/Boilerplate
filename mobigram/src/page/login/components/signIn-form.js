@@ -24,7 +24,7 @@ const SignInForm = () => {
 
   const onSubmit = (data) => {
     setLocalStorageUserInfo(data.Username);
-    navigate("/mobi");
+    navigate("/home");
   };
 
   // 로컬 스토리지에 Username 값 저장

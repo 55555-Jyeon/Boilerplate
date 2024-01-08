@@ -10,7 +10,7 @@ const SearchPage = () => {
 export default SearchPage;
 
 const Container = styled.div`
-  width: 100vw;
+  width: 100%;
   overflow-x: hidden;
 `;
 
@@ -18,5 +18,4 @@ const Contents = styled.div`
   width: 100%;
   height: 2000px;
   background-color: lightpink;
-  margin-left: 335px;
 `;
