@@ -49,6 +49,7 @@ mobi community에서 pair(페어)와 함께 진행했던 sessions... <br />
   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; reactQuery 사용하기 <br />
   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2페어가 진행했던 메인 배너 슬라이드 적용해보기 <br />
   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 2페어가 진행했던 검색 기능 적용해보기 <br />
+  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 협업 시 사용하지 못했던 JS Docs를 활용해보기 <br />
   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 1페어가 진행했던 Error Boundary와 Suspense 적용해보기 <br />
   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Dainel 님이 진행한 채팅, socket 공부하기 👉 가능하다면 적용까지 해보기 👀 <br />
 
@@ -138,16 +139,14 @@ mobi community에서 pair(페어)와 함께 진행했던 sessions... <br />
   <tr>
     <td>day 04</td>
     <td>2024-01-07</td>
-    <td>home page</td>
-    <td>✔️</td>
+    <td rowspan="2">home page</td>
+    <td rowspan="2">✔️</td>
     <td>side menubar library</td>
   </tr>
   <tr>
     <td>day 05</td>
     <td>2024-01-08</td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>errors.....</td>
   </tr>
   <tr>
     <td>day 06</td>
@@ -278,13 +277,13 @@ RHF을 활용해 만든 회원가입 로직 <br />
 
 ###### range | 2024.01.07 ~ 2024.01.08
 
-home page : Side Menubar + infinite scroll
+home page : Aside Menubar + infinite scroll
 
 <br />
 
 [ checklist ] <br />
 
-Aside Menubar ✅ <br />
+Side Menubar ✅ <br />
 로그인 전후 페이지의 각각 레이아웃 구조 완성하기 ✅ <br />
 one post 컴포넌트 만들어서 infinite scroll <br />
 
