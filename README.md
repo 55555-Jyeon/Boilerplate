@@ -112,17 +112,17 @@ mobi community에서 pair(페어)와 함께 진행했던 sessions... <br />
 <table>
   <tr>
     <td>number</td>
-    <td> 🗓️ </td>
-    <td>todo title</td>
+    <td> 🗓️ date</td>
+    <td>page</td>
     <td>check</td>
-    <td>💬</td>
+    <td>💬 task & issues</td>
   </tr>
   <tr>
     <td>day 01</td>
     <td>2024-01-04</td>
     <td>design</td>
     <td>✔️</td>
-    <td>-</td>
+    <td>figma</td>
   </tr>
   <tr>
     <td>day 02</td>
@@ -134,33 +134,32 @@ mobi community에서 pair(페어)와 함께 진행했던 sessions... <br />
   <tr>
     <td>day 03</td>
     <td>2024-01-06</td>
-    <td>RHF issue</td>
+    <td>RHF</td>
   </tr>
   <tr>
     <td>day 04</td>
     <td>2024-01-07</td>
-    <td rowspan="2">home page</td>
-    <td rowspan="2">✔️</td>
+    <td rowspan="4">home page</td>
+    <td>✔️</td>
     <td>side menubar library</td>
   </tr>
   <tr>
     <td>day 05</td>
     <td>2024-01-08</td>
-    <td>errors.....</td>
+    <td>✔️</td>
+    <td>axios & msw</td>
   </tr>
   <tr>
     <td>day 06</td>
     <td>2024-01-09</td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>✔️</td>
+    <td>one-post, one-user slider</td>
   </tr>
   <tr>
     <td>day 07</td>
     <td>2024-01-10</td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>✔️</td>
+    <td>Infinite Scroll</td>
   </tr>
   <tr>
     <td>day 08</td>
@@ -179,6 +178,20 @@ mobi community에서 pair(페어)와 함께 진행했던 sessions... <br />
   <tr>
     <td>day 10</td>
     <td>2024-01-12</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>day 11</td>
+    <td>2024-01-13</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>day 12</td>
+    <td>2024-01-14</td>
     <td></td>
     <td></td>
     <td></td>
@@ -273,9 +286,9 @@ RHF을 활용해 만든 회원가입 로직 <br />
 
 ---
 
-##### day 04 ~ 05
+##### day 04 ~ 07
 
-###### range | 2024.01.07 ~ 2024.01.08
+###### range | 2024.01.07 ~ 2024.01.11
 
 home page : Aside Menubar + infinite scroll
 
@@ -285,7 +298,8 @@ home page : Aside Menubar + infinite scroll
 
 Side Menubar ✅ <br />
 로그인 전후 페이지의 각각 레이아웃 구조 완성하기 ✅ <br />
-one post 컴포넌트 만들어서 infinite scroll <br />
+one-post, one-user 전역 컴포넌트로 만들고 각각 carousel 적용하기 ✅ <br />
+home page의 postsList infinite scroll 적용하기 <br />
 
 <br />
 
