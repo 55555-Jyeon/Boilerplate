@@ -6,18 +6,25 @@ import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import "./carousel/Carousel.css"; // custom CSS
 import { Pagination, Navigation, HashNavigation } from "swiper/modules";
 
-const OnePost = () => {
+const OnePost = ({ profileImg, username, location, postImg, createdAt }) => {
+  console.log("post's Imgs", postImg);
+
   return (
     <Container>
       <Header>
         <UserInfo>
-          {/*  <img src={PostIcon.defaultProfile} /> */}
-          <img src={""} />
+          {profileImg ? (
+            <img src={profileImg} />
+          ) : (
+            <img src={PostIcon.defaultProfile} />
+          )}
+
           <div>
-            <span>{}</span>
-            <span>{}</span>
+            <span>{username}</span>
+            <span>{location}</span>
           </div>
         </UserInfo>
         <img src={PostIcon.more} />
@@ -35,16 +42,18 @@ const OnePost = () => {
           modules={[Pagination, Navigation, HashNavigation]}
           className="mySwiper"
         >
-          {/* {mock.postImages[0].map((_, idx) => {
-            <SwiperSlide key={idx} data-hash={idx}>
-              {mock.postImages}
-            </SwiperSlide>;
-          })} */}
-          <SwiperSlide data-hash="slide1">Slide 1</SwiperSlide>
-          <SwiperSlide data-hash="slide2">Slide 2</SwiperSlide>
-          <SwiperSlide data-hash="slide3">Slide 3</SwiperSlide>
-          <SwiperSlide data-hash="slide4">Slide 4</SwiperSlide>
-          <SwiperSlide data-hash="slide5">Slide 5</SwiperSlide>
+          {/* {postImg &&
+            postImg.map((_, idx) => {
+              <SwiperSlide key={idx} data-hash={`slide + ${idx + 1}`}>
+                <Image src={postImg[0]} />
+              </SwiperSlide>;
+            })} */}
+          <SwiperSlide data-hash="slide1">
+            <Image src={postImg[0]} />
+          </SwiperSlide>
+          <SwiperSlide data-hash="slide2">
+            <Image src={postImg[1]} />
+          </SwiperSlide>
         </Swiper>
       </ImageBox>
       <Icons>
@@ -100,7 +109,9 @@ const UserInfo = styled.div`
   height: 100%;
   & > img {
     width: 32px;
+    height: 32px;
     margin: 0 12px;
+    border-radius: 50%;
   }
   & > div {
     ${FlexLeft}
@@ -116,28 +127,17 @@ const UserInfo = styled.div`
   }
 `;
 const ImageBox = styled.div`
-  width: 100%;
+  width: 470px;
   height: 470px;
   ${FlexCenter}
   background-color: #fafafa;
-
-  // swiper
-  & > div {
-    &.swiper-button-prev:after,
-    &.swiper-button-next:after {
-      /* font family 로 아이콘 사용 중 */
-    }
-
-    // slide indicators (pagination)
-    &.swiper-pagination {
-      & > span {
-        &.swiper-pagination-bullet-active {
-          background-color: ${({ theme }) => theme.COLORS["white"]};
-        }
-      }
-    }
-  }
 `;
+const Image = styled.img`
+  width: 470px;
+  height: 470px;
+  overflow: hidden;
+`;
+
 const Icons = styled.div`
   width: 100%;
   height: 54px;

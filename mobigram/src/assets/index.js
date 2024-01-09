@@ -12,7 +12,6 @@ import liked from "./icon/liked.png";
 import menu from "./icon/menu.png";
 import error from "./icon/mismatch.png";
 import more from "./icon/more.png";
-import postChevron from "./icon/post-chevron.png";
 import problem from "./icon/problem.png";
 import save from "./icon/save.png";
 import saved from "./icon/saved.png";
@@ -38,7 +37,6 @@ export const PostIcon = {
   like,
   liked,
   more,
-  postChevron,
   save,
   saved,
   send,

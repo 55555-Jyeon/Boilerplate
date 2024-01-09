@@ -12,21 +12,25 @@ const HomePage = () => {
     queryFn: () => Api.getPostList(),
   });
 
+  /*  console.log("postList", postList); */
+
   return (
-    <Container>
-      <Contents>
-        {postList[0].map((post, idx) => (
-          <OnePost
-            key={idx}
-            user={post.User}
-            location={post.location}
-            postImg={post.Post_img}
-            since={post.createdAt}
-          />
-        ))}
-        <OnePost />
-      </Contents>
-    </Container>
+    postList && (
+      <Container>
+        <Contents>
+          {postList[0].map((post, idx) => (
+            <OnePost
+              key={idx}
+              username={post.User.nickName}
+              profileImg={post.User.profileImg}
+              location={post.location}
+              postImg={post.postImages}
+              createdAt={post.createdAt}
+            />
+          ))}
+        </Contents>
+      </Container>
+    )
   );
 };
 
