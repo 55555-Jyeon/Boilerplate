@@ -1,10 +1,16 @@
 import { http, HttpResponse } from "msw";
 import { faker } from "@faker-js/faker";
-import { createRandomUser, createRandomPost } from "../faker/faker-data";
+import {
+  createRandomUser,
+  createRandomPost,
+  createRandomFriend,
+} from "../faker/faker-data";
 
 // MOCK
 const UserData = createRandomUser(10);
 const PostData = createRandomPost(10);
+const LoggedInUserData = createRandomUser(1);
+const FriendsData = createRandomFriend(30);
 
 // USER
 const signUpUserData = [
@@ -48,17 +54,21 @@ export const postSignupUser = http.post("api/signup", async ({ request }) => {
   return HttpResponse.json(signUpUserData, { status: 201 });
 });
 
+// Random Users List
 export const getUserInfo = http.get("api/user", () => {
-  return HttpResponse.json([UserData], {
-    status: 200,
-  });
+  return HttpResponse.json([UserData], { status: 200 });
 });
 
-// POSTS
+// My Friends List
+// export const getMyData = http.get("api/user/friend", () => {
+//   console.log("my data", LoggedInUserData);
+//   return HttpResponse.json([LoggedInUserData], { status: 200 });
+// });
+// export const getMyFriends = http.get("api/user", () => {
+//   return HttpResponse.json([FriendsData], { status: 200 });
+// });
+
+// Random Posts List
 export const getPostsData = http.get("api/posts", () => {
-  return HttpResponse.json([PostData], {
-    status: 200,
-  });
+  return HttpResponse.json([PostData], { status: 200 });
 });
-
-// LOGGED-IN USER DATA

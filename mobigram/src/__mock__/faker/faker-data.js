@@ -23,12 +23,24 @@ export const createRandomUser = (count) => {
         isLiked: false,
         likedCount: Math.floor(Math.random() * 100),
       },
-      // user's reels
-      MyReels: {},
+      // user's text post
+      MyLogs: {},
       // user's saved
       MySavedContents: {},
       // user's tagged
       MeTaggedContents: {},
+      // user's friends list
+      MyFriends: {
+        User: Array(Math.floor(Math.random() * 3) + 1)
+          .fill()
+          .map(() => {
+            return {
+              id: shortId.generate(),
+              nickName: faker.person.firstName(),
+              profileImg: faker.image.url(),
+            };
+          }),
+      },
     }));
 };
 
@@ -69,3 +81,13 @@ export const createRandomPost = (count) =>
       savedCount: Math.floor(Math.random() * 100),
       myPost: false,
     }));
+
+// random friends
+export const createRandomFriend = (count) => {
+  Array(count)
+    .fill()
+    .map(() => ({
+      id: shortId.generate(),
+      profileImg: faker.image.url(),
+    }));
+};

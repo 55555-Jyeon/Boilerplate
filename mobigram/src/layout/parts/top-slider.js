@@ -8,10 +8,9 @@ import "../../components/carousel/Carousel.css"; // custom CSS
 
 const FriendListSlider = () => {
   const [swiperRef, setSwiperRef] = useState(null);
-  const appendNumber = useRef(500);
   const prependNumber = useRef(1);
 
-  // Create array with 500 slides
+  // Create slides
   const [slides, setSlides] = useState(
     Array.from({ length: 20 }).map((_, index) => `Slide ${index + 1}`)
   );
@@ -32,7 +31,6 @@ const FriendListSlider = () => {
         modules={[Virtual, Navigation]}
         onSwiper={setSwiperRef}
         slidesPerView={8}
-        /* centeredSlides={true} */
         navigation={true}
         virtual
       >
