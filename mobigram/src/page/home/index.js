@@ -1,18 +1,17 @@
 import styled from "styled-components";
 import OnePost from "../../components/one-post";
 import { FlexCenter } from "../../styles/common.style";
-import { useInfiniteQuery, useQuery } from "react-query";
+import { useInfiniteQuery } from "react-query";
 import { Api } from "../../api";
 import { POST_QUERY_KEY } from "../../constants/query-key";
 import { useEffect } from "react";
 
 const HomePage = () => {
   // Queries
-  // const { data: postList } = useQuery({ queryKey: [POST_QUERY_KEY.POST_LIST], queryFn: () => Api.getPostList()});
   const { data: postList, fetchNextPage } = useInfiniteQuery({
     queryKey: [POST_QUERY_KEY.POST_LIST],
     queryFn: ({ pageParam = 1 }) => Api.fetchPostList(pageParam),
-    getNextPageParam: (lastPage, allPages) => {
+    getNextPageParam: (lastPage) => {
       const page = lastPage.page;
       if (lastPage.total_pages === page) return false;
       return page + 1;
@@ -34,29 +33,16 @@ const HomePage = () => {
     };
   });
 
-  // 커스텀 훅에 hasNextPage와 fetchNextPage를 넣어 setTarget을 받아옵니다.
-  // const { setTarget } = useIntersectionObserver({ hasNextPage, fetchNextPage });
-
   return (
     postList && (
       <Container>
         <Contents>
           {postList?.pages.map((page) => {
             return page?.map((post) =>
-              post.map((el) => (
-                <OnePost
-                  key={el.id}
-                  user={el.User.nickName}
-                  profileImg={el.User.profileImg}
-                  location={el.location}
-                  postImg={el.postImages}
-                  createdAt={el.createdAt}
-                />
-              ))
+              post.map((el) => <OnePost key={el.id} post={el} user={el.User} />)
             );
           })}
         </Contents>
-        {/* <div ref={setTarget} /> */}
       </Container>
     )
   );

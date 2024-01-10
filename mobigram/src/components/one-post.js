@@ -9,20 +9,20 @@ import "swiper/css/pagination";
 import "./carousel/Carousel.css"; // custom CSS
 import { Pagination, Navigation, HashNavigation } from "swiper/modules";
 
-const OnePost = ({ profileImg, username, location, postImg }) => {
+const OnePost = ({ post, user }) => {
   return (
     <Container>
       <Header>
         <UserInfo>
-          {profileImg ? (
-            <img src={profileImg} />
+          {user.profileImg ? (
+            <img src={user.profileImg} />
           ) : (
             <img src={PostIcon.defaultProfile} />
           )}
 
           <div>
-            <span>{username}</span>
-            <span>{location}</span>
+            <span>{user.nickName}</span>
+            <span>{post.location}</span>
           </div>
         </UserInfo>
         <img src={PostIcon.more} />
@@ -40,18 +40,12 @@ const OnePost = ({ profileImg, username, location, postImg }) => {
           modules={[Pagination, Navigation, HashNavigation]}
           className="mySwiper"
         >
-          {/* {postImg &&
-            postImg.map((_, idx) => {
+          {post.postImages &&
+            post.postImages.map((_, idx) => (
               <SwiperSlide key={idx} data-hash={`slide + ${idx + 1}`}>
-                <Image src={postImg[0]} />
-              </SwiperSlide>;
-            })} */}
-          <SwiperSlide data-hash="slide1">
-            <Image src={postImg[0]} />
-          </SwiperSlide>
-          <SwiperSlide data-hash="slide2">
-            <Image src={postImg[1]} />
-          </SwiperSlide>
+                <Image src={post.postImages} />
+              </SwiperSlide>
+            ))}
         </Swiper>
       </ImageBox>
       <Icons>
@@ -66,14 +60,14 @@ const OnePost = ({ profileImg, username, location, postImg }) => {
       </Icons>
       <TextBox>
         <div>
-          <p>Username</p>
-          <p>the first sentence of the contents</p>
+          <p>{user.nickName}</p>
+          <p>{post.content}</p>
         </div>
         <div>
           <span>more</span>
           <span>view all 00 comments</span>
         </div>
-        <span>3 days ago</span>
+        <span>{post.createdAt}</span>
       </TextBox>
     </Container>
   );

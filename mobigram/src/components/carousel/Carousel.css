@@ -7,9 +7,9 @@
 .swiper-button-next {
   background-color: #fff;
   opacity: 0.6;
-  height: 30px;
-  width: 30px;
-  border-radius: 50px;
+  height: 30px !important;
+  width: 30px !important;
+  border-radius: 50%;
   color: black !important;
 }
 

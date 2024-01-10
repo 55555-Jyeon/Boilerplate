@@ -49,14 +49,16 @@ export const createRandomPost = (count) =>
   Array(count)
     .fill()
     .map(() => ({
-      id: shortId.generate(),
-      content: faker.lorem.paragraph(),
-      location: faker.location.state(),
+      // posts' writer
       User: {
         id: shortId.generate(),
         nickName: faker.person.firstName(),
         profileImg: faker.image.url(),
       },
+      // posts' contents
+      id: shortId.generate(),
+      content: faker.lorem.paragraph(),
+      location: faker.location.state(),
       postImages: Array(Math.floor(Math.random() * 3) + 1)
         .fill()
         .map(() => faker.image.url()),

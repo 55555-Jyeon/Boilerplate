@@ -5,10 +5,18 @@ import { useRef, useState } from "react";
 import { Virtual, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "../../components/carousel/Carousel.css"; // custom CSS
+import { useQuery } from "react-query";
+import { USER_QUERY_KEY } from "../../constants/query-key";
+import { AuthApi } from "../../api";
 
 const FriendListSlider = () => {
   const [swiperRef, setSwiperRef] = useState(null);
   const prependNumber = useRef(1);
+
+  // const { data: userList } = useQuery({
+  //   queryKey: [USER_QUERY_KEY.USER_LIST],
+  //   queryFn: () => AuthApi.getUsersData(),
+  // });
 
   // Create slides
   const [slides, setSlides] = useState(

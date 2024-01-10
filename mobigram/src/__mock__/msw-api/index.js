@@ -1,16 +1,11 @@
 import { http, HttpResponse } from "msw";
 import { faker } from "@faker-js/faker";
-import {
-  createRandomUser,
-  createRandomPost,
-  createRandomFriend,
-} from "../faker/faker-data";
+import { createRandomUser, createRandomPost } from "../faker/faker-data";
 
 // MOCK
 const UserData = createRandomUser(10);
 const PostData = createRandomPost(5);
-const LoggedInUserData = createRandomUser(1);
-const FriendsData = createRandomFriend(30);
+const FriendsData = createRandomUser(15);
 
 // USER
 const signUpUserData = [
@@ -60,13 +55,9 @@ export const getUserInfo = http.get("api/user", () => {
 });
 
 // My Friends List
-// export const getMyData = http.get("api/user/friend", () => {
-//   console.log("my data", LoggedInUserData);
-//   return HttpResponse.json([LoggedInUserData], { status: 200 });
-// });
-// export const getMyFriends = http.get("api/user", () => {
-//   return HttpResponse.json([FriendsData], { status: 200 });
-// });
+export const getMyFriends = http.get("api/user", () => {
+  return HttpResponse.json([FriendsData], { status: 200 });
+});
 
 // Random Posts List
 export const getPostsData = http.get("api/posts", () => {

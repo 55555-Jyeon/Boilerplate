@@ -10,8 +10,8 @@ const fetchPostList = async (pageParam) => {
 };
 
 const getFriendList = async () => {
-  const response = await axiosInstance.get("api/user/friend");
-  /* console.log("response data", response.data); */
+  const response = await axiosInstance.get("api/user");
+  // console.log("response data", response.data); // null
 
   return response.data;
 };
@@ -23,16 +23,22 @@ export const Api = {
   getFriendList,
 };
 
-const UserPATH = "/api/user";
 export const AuthApi = {
   // sign-up
   async postSignUpData(signupData) {
-    const res = await axiosInstance().post(UserPATH, signupData);
-    return res;
+    const response = await axiosInstance.post("api/user", signupData);
+    return response;
   },
   // sign-in
   async postLoginUserData(loginUserData) {
-    const res = await axiosInstance().post(UserPATH + "login", loginUserData);
-    return res.data;
+    const response = await axiosInstance.post("api/user/login", loginUserData);
+    return response.data;
+  },
+
+  // get random users
+  async getUsersData() {
+    const response = await axiosInstance.get("api/user");
+    console.log("user data?", response.data); // null
+    return response.data;
   },
 };
