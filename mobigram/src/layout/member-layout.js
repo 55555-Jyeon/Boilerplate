@@ -4,7 +4,7 @@ import SideMenubar from "./parts/side-menu";
 import FriendListSlider from "./parts/top-slider";
 import styled from "styled-components";
 
-const MobiLayout = () => {
+const ProtectedLayout = () => {
   return (
     <>
       <SideMenubar />
@@ -17,7 +17,7 @@ const MobiLayout = () => {
   );
 };
 
-export default MobiLayout;
+export default ProtectedLayout;
 
 const Container = styled.div`
   width: auto(100% - 335px);

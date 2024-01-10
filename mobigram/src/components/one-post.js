@@ -9,9 +9,7 @@ import "swiper/css/pagination";
 import "./carousel/Carousel.css"; // custom CSS
 import { Pagination, Navigation, HashNavigation } from "swiper/modules";
 
-const OnePost = ({ profileImg, username, location, postImg, createdAt }) => {
-  console.log("post's Imgs", postImg);
-
+const OnePost = ({ profileImg, username, location, postImg }) => {
   return (
     <Container>
       <Header>

@@ -8,7 +8,7 @@ import {
 
 // MOCK
 const UserData = createRandomUser(10);
-const PostData = createRandomPost(10);
+const PostData = createRandomPost(5);
 const LoggedInUserData = createRandomUser(1);
 const FriendsData = createRandomFriend(30);
 
