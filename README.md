@@ -334,9 +334,6 @@ post의 내용이 무한스크롤될 때 사이드에 있는 menubar는 fixed �
 
 <br />
 
-side menubar 1 👉 <a href="https://www.npmjs.com/package/@trendmicro/react-sidenav"> react-sidenav </a> <br />
-side menubar 2 👉 <a href="https://reactjsexample.com/minimal-side-navigation-component-for-react/"> minimal-side-navigation </a> <br />
-
 ---
 
 ##### day 08 ~
@@ -357,8 +354,16 @@ menu:onClick 디자인 적용 안 되는 부분 해결 <br />
 
 <br />
 
-library 1 👉 <a href=""> ref 1 </a> <br />
-library 2 👉 <a href=""> ref 2 </a> <br />
+figma로 디자인된 side-menubar
+
+<p>
+  <img width="40%" src="https://github.com/55555-Jyeon/Boilerplate/assets/134191817/4510828a-5ad6-4c3d-ae0b-dbee5e8a100a" />
+  <img width="40%" src="https://github.com/55555-Jyeon/Boilerplate/assets/134191817/31d4f392-6fb7-4e57-9321-e8b10ca90e32" />
+  <img width="10.75%" src="https://github.com/55555-Jyeon/Boilerplate/assets/134191817/e1410156-1686-428e-9a5c-681aaa1d7245" />
+</p>
+
+side menubar 1 👉 <a href="https://www.npmjs.com/package/@trendmicro/react-sidenav"> react-sidenav </a> <br />
+side menubar 2 👉 <a href="https://reactjsexample.com/minimal-side-navigation-component-for-react/"> minimal-side-navigation </a> <br />
 
 ---
 
