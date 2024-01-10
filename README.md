@@ -159,7 +159,7 @@ mobi community에서 pair(페어)와 함께 진행했던 sessions... <br />
     <td>day 07</td>
     <td>2024-01-10</td>
     <td>✔️</td>
-    <td>Infinite Scroll</td>
+    <td>Infinite Scroll, github issue</td>
   </tr>
   <tr>
     <td>day 08</td>
@@ -299,7 +299,38 @@ home page : Aside Menubar + infinite scroll
 Side Menubar ✅ <br />
 로그인 전후 페이지의 각각 레이아웃 구조 완성하기 ✅ <br />
 one-post, one-user 전역 컴포넌트로 만들고 각각 carousel 적용하기 ✅ <br />
-home page의 postsList infinite scroll 적용하기 <br />
+home page의 postsList infinite scroll 적용하기 ✅ <br />
+
+<br />
+
+로그인하게 되면 protected-layout이 적용됩니다. <br />
+왼쪽엔 side menubar, 위엔 user의 친구 목록이 수평 방향으로 스크롤되는 슬라이드가 있습니다. <br />
+
+figma로 디자인한 화면
+
+<p>
+<img src="https://github.com/55555-Jyeon/Boilerplate/assets/134191817/03c61066-c50a-4655-afed-a9116a669b9a" />
+</p>
+
+post의 내용이 무한스크롤될 때 사이드에 있는 menubar는 fixed 되어 있습니다.
+
+<p>
+<img src="https://github.com/55555-Jyeon/Boilerplate/assets/134191817/aaebefb9-1420-4fd3-ac40-9eff2cb1b0cf" />
+</p>
+
+실제 구현된 화면 <br />
+친구 목록 슬라이드의 디자인이 변경되었습니다.
+
+<p>
+<img src="https://github.com/55555-Jyeon/Boilerplate/assets/134191817/98067da7-8640-4f48-850c-452ab4d7b98b" />
+</p>
+
+친구들의 게시글들이 home 화면에 렌더되며 이는 무한 스크롤로 볼 수 있습니다. <br />
+10개의 포스트가 1페이지이며, 스크롤이 뷰포트 최하단에 닿으면 다음 페이지를 렌더해줍니다.
+
+<p>
+<img src="https://github.com/55555-Jyeon/Boilerplate/assets/134191817/baf86de9-4f09-46c4-9306-e7a7a212b773" />
+</p>
 
 <br />
 
@@ -308,19 +339,21 @@ side menubar 2 👉 <a href="https://reactjsexample.com/minimal-side-navigation-
 
 ---
 
-##### day 00
+##### day 08 ~
 
-###### range | 2024.01.00
+###### range | 2024.01.11 ~
 
-??? page : function
+###### mobi path와 동시 진행, 8일부터는 틈틈히 진행하는 거라 진행 속도가 더딤
+
+home page : side menubar detail
 
 <br />
 
 [ checklist ] <br />
 
- <br />
- <br />
- <br />
+side menubar의 일부 메뉴 클릭 시 옆에서 창이 나오는 디자인 <br />
+menu:onClick 디자인 적용 안 되는 부분 해결 <br />
+라이브러리이기 때문에 custom에 한계가 있으므로 상황에 따라 다시 메뉴바를 직접 구현하는 것으로 변경할 수 있음 <br />
 
 <br />
 
