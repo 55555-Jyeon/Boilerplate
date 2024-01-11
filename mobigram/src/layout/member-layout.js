@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Footer from "./parts/footer";
-import SideMenubar from "./parts/side-menu";
+import SideMenubar from "./parts/side-menubar";
 import FriendListSlider from "./parts/top-slider";
 import styled from "styled-components";
 

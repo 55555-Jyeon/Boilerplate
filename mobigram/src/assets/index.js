@@ -2,9 +2,12 @@ import comment from "./icon/comment.png";
 import confirm from "./icon/confirm.png";
 import moon from "./icon/dark-mode.png";
 import defaultProfile from "./icon/default-profile.png";
+import search from "./icon/search.png";
 import explore from "./icon/explore.png";
+import exploring from "./icon/explore-clicked.png";
 import gear from "./icon/gear.png";
 import home from "./icon/home.png";
+import atHome from "./icon/at-home.png";
 import instagram from "./icon/instagram.png";
 import sun from "./icon/light-mode.png";
 import like from "./icon/like.png";
@@ -20,9 +23,12 @@ import logo from "./icon/logo.png";
 
 export const MenubarIcon = {
   defaultProfile,
+  search,
   explore,
+  exploring,
   gear,
   home,
+  atHome,
   sun,
   like,
   menu,

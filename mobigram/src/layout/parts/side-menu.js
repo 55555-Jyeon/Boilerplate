@@ -4,7 +4,7 @@ import { FlexAlignCenter, FlexCenter } from "../../styles/common.style";
 import { useNavigate } from "react-router-dom";
 import { LOGO, MenubarIcon } from "../../assets";
 
-const SideMenubar = () => {
+const SideMenu = () => {
   const navigate = useNavigate();
   return (
     <Container>
@@ -59,7 +59,7 @@ const SideMenubar = () => {
     </Container>
   );
 };
-export default SideMenubar;
+export default SideMenu;
 
 const Container = styled.div`
   position: fixed;
