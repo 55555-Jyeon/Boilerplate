@@ -1,0 +1,29 @@
+.swiper-wrapper {
+  width: 630px;
+}
+
+/* slide prev & next buttons */
+.swiper-button-prev,
+.swiper-button-next {
+  background-color: #fff;
+  opacity: 0.6;
+  height: 30px !important;
+  width: 30px !important;
+  border-radius: 50%;
+  color: black !important;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  font-size: 0.7rem !important;
+  font-weight: 600 !important;
+}
+
+/* slide indicators (pagination) */
+.swiper-pagination-bullet {
+  background-color: white;
+  opacity: 0.4;
+}
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
