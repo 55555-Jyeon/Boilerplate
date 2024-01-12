@@ -109,6 +109,8 @@ mobi community에서 pair(페어)와 함께 진행했던 sessions... <br />
 
 #### 🗓️ schedule table
 
+###### mobi path와 동시 진행, 틈틈히 진행하는 거라 진행 속도가 더딤
+
 <table>
   <tr>
     <td>number</td>
@@ -164,34 +166,49 @@ mobi community에서 pair(페어)와 함께 진행했던 sessions... <br />
   <tr>
     <td>day 08</td>
     <td>2024-01-11</td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td rowspan="4">side menubar</td>
+    <td rowspan="4"></td>
+    <td>Re-implementing (library X)</td>
   </tr>
   <tr>
     <td>day 09</td>
     <td>2024-01-12</td>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>onClick effect</td>
   </tr>
   <tr>
     <td>day 10</td>
-    <td>2024-01-12</td>
-    <td></td>
-    <td></td>
+    <td>2024-01-13</td>
     <td></td>
   </tr>
   <tr>
     <td>day 11</td>
-    <td>2024-01-13</td>
+    <td>2024-01-14</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>day 12</td>
+    <td>2024-01-15</td>
     <td></td>
     <td></td>
     <td></td>
   </tr>
   <tr>
-    <td>day 12</td>
-    <td>2024-01-14</td>
+    <td>day 13</td>
+    <td>2024-01-16</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>day 14</td>
+    <td>2024-01-17</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>day 15</td>
+    <td>2024-01-18</td>
     <td></td>
     <td></td>
     <td></td>
@@ -340,26 +357,24 @@ post의 내용이 무한스크롤될 때 사이드에 있는 menubar는 fixed �
 
 ###### range | 2024.01.11 ~
 
-###### mobi path와 동시 진행, 8일부터는 틈틈히 진행하는 거라 진행 속도가 더딤
-
 home page : side menubar detail
 
 <br />
 
 [ checklist ] <br />
 
+라이브러리 적용해 구현했으나 animation 등 줘야 하는 효과가 많아 직접 다시 구현하기 <br />
 side menubar의 일부 메뉴 클릭 시 옆에서 창이 나오는 디자인 <br />
 menu:onClick 디자인 적용 안 되는 부분 해결 <br />
-라이브러리이기 때문에 custom에 한계가 있으므로 상황에 따라 다시 메뉴바를 직접 구현하는 것으로 변경할 수 있음 <br />
 
 <br />
 
 figma로 디자인된 side-menubar
 
 <p>
-  <img width="40%" src="https://github.com/55555-Jyeon/Boilerplate/assets/134191817/4510828a-5ad6-4c3d-ae0b-dbee5e8a100a" />
-  <img width="40%" src="https://github.com/55555-Jyeon/Boilerplate/assets/134191817/31d4f392-6fb7-4e57-9321-e8b10ca90e32" />
-  <img width="10.75%" src="https://github.com/55555-Jyeon/Boilerplate/assets/134191817/e1410156-1686-428e-9a5c-681aaa1d7245" />
+  <img width="25%" src="https://github.com/55555-Jyeon/Boilerplate/assets/134191817/4510828a-5ad6-4c3d-ae0b-dbee5e8a100a" />
+  <img width="25%" src="https://github.com/55555-Jyeon/Boilerplate/assets/134191817/31d4f392-6fb7-4e57-9321-e8b10ca90e32" />
+  <img width="6.72%" src="https://github.com/55555-Jyeon/Boilerplate/assets/134191817/e1410156-1686-428e-9a5c-681aaa1d7245" />
 </p>
 
 side menubar 1 👉 <a href="https://www.npmjs.com/package/@trendmicro/react-sidenav"> react-sidenav </a> <br />
