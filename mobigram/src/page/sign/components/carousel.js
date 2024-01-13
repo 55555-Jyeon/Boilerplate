@@ -42,7 +42,7 @@ export default ImageSlider;
 
 const Container = styled.div`
   position: absolute;
-  left: 0;
+  left: 5%;
   width: 50%;
   height: 100%;
   padding-left: 15%;
@@ -50,12 +50,12 @@ const Container = styled.div`
 `;
 
 const Iphone = styled.img`
-  width: 40%;
+  width: 56%;
   margin-top: 4%;
 `;
 const Slides = styled.div`
   position: absolute;
-  width: 15%;
-  margin: 0.2% 0 0 6%;
+  width: 21%;
+  margin: 0.2% 0 1% 8%;
   transition: all ease-in-out;
 `;
