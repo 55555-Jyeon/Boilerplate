@@ -9,10 +9,13 @@ const GlobalStyles = createGlobalStyle`
   }
   body {
     background-color: #FFFFFF;
-    font-family: 'SUIT', sans-serif;
+    font-family: 'Noto-sans', sans-serif;
   }
   button {
     border: none;
+  }
+  a {      
+    text-decoration: none;
   }
 `;
 

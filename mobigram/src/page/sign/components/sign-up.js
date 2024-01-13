@@ -115,6 +115,7 @@ const Form = styled.form`
   & > p {
     width: 60%;
     text-align: center;
+    padding: 6px 0;
     color: ${({ theme }) => theme.COLORS.gray[500]};
     font-size: ${({ theme }) => theme.FONT_SIZE["extraSmall"]};
     font-weight: ${({ theme }) => theme.FONT_WEIGHT["light"]};
@@ -127,13 +128,14 @@ const Form = styled.form`
 const Logo = styled.img`
   width: 180px;
   height: 54px;
-  padding: 18px 0;
+  margin: 10px 0 28px;
 `;
 
 const LineGroup = styled.div`
   width: 268px;
   ${FlexAlignCenter}
   justify-content: space-between;
+  padding: 10px 0;
 
   & > p {
     font-size: ${({ theme }) => theme.FONT_SIZE["extraSmall"]};
@@ -152,10 +154,12 @@ const Inputs = styled.div`
 `;
 
 const SNSlogin = styled.div`
-  ${FlexCenter}
+  display: flex;
+  padding: 6px 0;
 
   // log in with instagram
   & > p {
+    padding-top: 2%;
     font-size: ${({ theme }) => theme.FONT_SIZE["small"]};
     font-weight: ${({ theme }) => theme.FONT_WEIGHT["semiBold"]};
     background: linear-gradient(

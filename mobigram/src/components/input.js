@@ -78,8 +78,8 @@ const variantCSS = {
 
 const sizeCSS = {
   form: css`
-    min-width: 256px;
-    min-height: 30px;
+    min-width: 268px;
+    min-height: 34px;
 
     padding-left: 10px;
   `,
@@ -98,7 +98,7 @@ const InputBox = styled.div`
 
 const Label = styled.label`
   position: relative;
-  top: 50%;
+  top: 45%;
   left: 4%;
   color: ${({ theme }) => theme.COLORS.gray[300]};
   font-size: ${({ theme }) => theme.FONT_SIZE["extraSmall"]};

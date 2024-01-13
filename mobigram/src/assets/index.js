@@ -20,6 +20,7 @@ import save from "./icon/save.png";
 import saved from "./icon/saved.png";
 import send from "./icon/send.png";
 import logo from "./icon/logo.png";
+import logoIcon from "./icon/logo-icon.svg";
 
 export const MenubarIcon = {
   defaultProfile,
@@ -32,7 +33,6 @@ export const MenubarIcon = {
   sun,
   like,
   menu,
-  more,
   moon,
   problem,
   send,
@@ -57,4 +57,4 @@ export const FormIcon = {
   instagram,
 };
 
-export const LOGO = { logo };
+export const LOGO = { logo, logoIcon };

@@ -4,6 +4,8 @@ import router from "./router/router";
 import { ThemeProvider } from "styled-components";
 import theme from "./styles/theme.style";
 import { worker } from "./__mock__/browser";
+import { RecoilRoot } from "recoil";
+import GlobalStyles from "./styles/global.style";
 
 function App() {
   const queryClient = new QueryClient();
@@ -15,8 +17,11 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
+      <GlobalStyles />
       <QueryClientProvider client={queryClient}>
-        <RouterProvider router={router} />
+        <RecoilRoot>
+          <RouterProvider router={router} />
+        </RecoilRoot>
       </QueryClientProvider>
     </ThemeProvider>
   );

@@ -55,7 +55,7 @@ const Iphone = styled.img`
 `;
 const Slides = styled.div`
   position: absolute;
-  width: 16.5%;
-  margin: 0.2% 0 0 6.5%;
+  width: 15%;
+  margin: 0.2% 0 0 6%;
   transition: all ease-in-out;
 `;

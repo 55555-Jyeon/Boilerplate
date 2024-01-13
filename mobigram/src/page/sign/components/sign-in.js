@@ -105,6 +105,7 @@ const Form = styled.form`
 
   // forgot password?
   & > p {
+    padding: 6px 0;
     font-size: ${({ theme }) => theme.FONT_SIZE["extraSmall"]};
     font-weight: ${({ theme }) => theme.FONT_WEIGHT["light"]};
     cursor: pointer;
@@ -113,14 +114,14 @@ const Form = styled.form`
 const Logo = styled.img`
   width: 180px;
   height: 54px;
-  padding: 18px 0;
-  margin-bottom: 18px;
+  margin: 10px 0 28px;
 `;
 
 const LineGroup = styled.div`
   width: 268px;
   ${FlexAlignCenter}
   justify-content: space-between;
+  padding: 10px 0;
 
   & > p {
     font-size: ${({ theme }) => theme.FONT_SIZE["extraSmall"]};
@@ -135,10 +136,12 @@ const Line = styled.div`
 `;
 
 const SNSlogin = styled.div`
-  ${FlexCenter}
+  display: flex;
+  padding: 6px 0;
 
   // log in with instagram
   & > p {
+    padding-top: 4px;
     font-size: ${({ theme }) => theme.FONT_SIZE["small"]};
     font-weight: ${({ theme }) => theme.FONT_WEIGHT["semiBold"]};
     background: linear-gradient(
