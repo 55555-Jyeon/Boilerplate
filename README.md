@@ -173,17 +173,17 @@ mobi community에서 pair(페어)와 함께 진행했던 sessions... <br />
   <tr>
     <td>day 09</td>
     <td>2024-01-12</td>
-    <td>onClick effect</td>
+    <td>onClick effect (1/2)</td>
   </tr>
   <tr>
     <td>day 10</td>
     <td>2024-01-13</td>
-    <td></td>
+    <td>onClick effect (2/2)</td>
   </tr>
   <tr>
     <td>day 11</td>
     <td>2024-01-14</td>
-    <td></td>
+    <td>onClick animation</td>
   </tr>
   <tr>
     <td>day 12</td>
