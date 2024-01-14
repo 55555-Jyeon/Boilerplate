@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { LOGO, MenubarIcon } from "../../assets";
-import { FlexAlignCenter, FlexCenter } from "../../styles/common.style";
+import { LOGO } from "../../assets";
+import { FlexAlignCenter } from "../../styles/common.style";
 import { useNavigate } from "react-router-dom";
 import { MENU_LIST } from "../../constants/navbar";
 import { useState } from "react";
@@ -79,13 +79,6 @@ const Container = styled.nav`
   position: fixed;
   top: 0;
   left: 0;
-  width: 335px;
-  height: 100vh;
-  border-right: 1px solid ${({ theme }) => theme.COLORS.gray[300]};
-
-  &.shrink {
-    width: 75px;
-  }
 `;
 
 const Logo = styled.img`
@@ -102,17 +95,21 @@ const Logo = styled.img`
 `;
 
 const MenuBar = styled.ul`
-  ${FlexCenter}
+  ${FlexAlignCenter}
+  justify-content: flex-start;
   flex-direction: column;
+  width: 335px;
+  height: 100vh;
   overflow: hidden;
+  transition: all 0.2s ease-in-out;
+  border-right: 1px solid ${({ theme }) => theme.COLORS.gray[300]};
 
   &.shrink {
-    justify-content: flex-start;
     width: 75px;
-    height: 100%;
   }
 
   & > li {
+    position: relative;
     width: 304px;
     height: 42px;
     margin: 19px 15.5px;
@@ -122,7 +119,7 @@ const MenuBar = styled.ul`
     cursor: pointer;
 
     &:last-of-type {
-      margin-top: 130%;
+      bottom: -37%;
     }
     &:hover,
     &:active {
@@ -131,15 +128,10 @@ const MenuBar = styled.ul`
     }
 
     &.shrink {
-      position: relative;
       width: 65px;
       height: 65px;
       margin: 8px 0;
       padding: 0 10px;
-
-      &:last-of-type {
-        bottom: -38%;
-      }
     }
 
     & > a {

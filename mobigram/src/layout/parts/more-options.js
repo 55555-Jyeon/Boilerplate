@@ -4,11 +4,7 @@ import { MORE_OPTIONS } from "../../constants/navbar";
 
 const MoreOptionList = ({ hasMoreOptions }) => {
   return (
-    <Container
-      style={{
-        opacity: hasMoreOptions ? "1" : "0",
-      }}
-    >
+    <Container className={hasMoreOptions && "changeOpacity"}>
       {MORE_OPTIONS.map((menu, idx) => (
         <li key={idx}>
           {menu.icon && <Icon src={menu.icon} />}
@@ -32,6 +28,11 @@ const Container = styled.ul`
   border-radius: 16px;
   background-color: ${({ theme }) => theme.COLORS["white"]};
   box-shadow: 5px 5px 10px 6px rgba(0, 0, 0, 12%);
+  opacity: 0;
+
+  &.changeOpacity {
+    opacity: 1;
+  }
 
   & > li {
     ${FlexAlignCenter}
@@ -41,6 +42,9 @@ const Container = styled.ul`
     transition: all ease 0.3s;
     cursor: default;
 
+    &:nth-of-type(3) {
+      cursor: wait;
+    }
     &:nth-of-type(4) {
       width: 100%;
       height: 6px;
