@@ -189,32 +189,38 @@ mobi community에서 pair(페어)와 함께 진행했던 sessions... <br />
     <td colspan="5" rowspan="">typescript study (0114 ~ 0117)</td>
   </tr>
   <tr>
-    <td colspan="5" rowspan="">mobithon toyproject (0118 ~ 0128)</td>
+    <td colspan="5" rowspan="">mobithon toyproject, chap chap (0118 ~ 0128)</td>
+  </tr>
+  <tr>
+    <td colspan="5" rowspan="">toyproject, postMobism (0128 ~ 0216)</td>
+  </tr>
+  <tr>
+    <td colspan="5" rowspan="">study NextJS (0219 ~ 0223)</td>
   </tr>
     <tr>
     <td>day 12</td>
-    <td>2024-01-00</td>
+    <td>2024-02-00</td>
     <td></td>
     <td></td>
     <td></td>
   </tr>
   <tr>
     <td>day 13</td>
-    <td>2024-01-00</td>
+    <td>2024-02-00</td>
     <td></td>
     <td></td>
     <td></td>
   </tr>
   <tr>
     <td>day 14</td>
-    <td>2024-01-00</td>
+    <td>2024-02-00</td>
     <td></td>
     <td></td>
     <td></td>
   </tr>
   <tr>
     <td>day 15</td>
-    <td>2024-01-00</td>
+    <td>2024-02-00</td>
     <td></td>
     <td></td>
     <td></td>
