@@ -119,7 +119,7 @@ const MenuBar = styled.ul`
     cursor: pointer;
 
     &:last-of-type {
-      bottom: -37%;
+      bottom: -34%;
     }
     &:hover,
     &:active {

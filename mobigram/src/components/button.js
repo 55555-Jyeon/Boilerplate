@@ -19,6 +19,12 @@ const variantCSS = {
     font-weight: ${({ theme }) => theme.FONT_WEIGHT["semiBold"]};
   `,
   disabled: css``,
+  profile: css`
+    border-radius: 10px;
+    background-color: ${({ theme }) => theme.COLORS.gray[200]};
+    font-size: ${({ theme }) => theme.FONT_SIZE["small"]};
+    font-weight: ${({ theme }) => theme.FONT_WEIGHT["semiBold"]};
+  `,
 };
 
 const sizeCSS = {
@@ -26,6 +32,11 @@ const sizeCSS = {
     min-width: 268px;
     min-height: 32px;
     margin: 12px 0;
+  `,
+  profile: css`
+    width: 106px;
+    height: 32px;
+    margin-left: 16px;
   `,
 };
 
@@ -36,8 +47,4 @@ const Button = styled.button`
   border: none;
   cursor: pointer;
   transition: all 0.6s;
-
-  &:hover,
-  &:focus {
-  }
 `;

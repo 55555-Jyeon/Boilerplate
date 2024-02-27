@@ -1,4 +1,7 @@
-import { LOGO, MenubarIcon } from "../assets";
+import { MenubarIcon } from "../assets";
+import ExplorePage from "../page/explore";
+import ChattingPage from "../page/message";
+import MyPage from "../page/my";
 
 export const MENU_LIST = [
   {
@@ -7,6 +10,7 @@ export const MENU_LIST = [
     icon: MenubarIcon.home,
     hasModal: false,
     hasOptions: false,
+    content: "",
   },
   {
     title: "Search",
@@ -21,6 +25,7 @@ export const MENU_LIST = [
     icon: MenubarIcon.explore,
     hasModal: false,
     hasOptions: false,
+    content: <ExplorePage />,
   },
   {
     title: "Message",
@@ -28,6 +33,7 @@ export const MENU_LIST = [
     icon: MenubarIcon.send,
     hasModal: false,
     hasOptions: false,
+    content: <ChattingPage />,
   },
   {
     title: "Notifications",
@@ -42,6 +48,7 @@ export const MENU_LIST = [
     icon: MenubarIcon.defaultProfile,
     hasModal: false,
     hasOptions: false,
+    content: <MyPage />,
   },
   {
     title: "More",
