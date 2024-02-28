@@ -3,6 +3,7 @@ import { faker } from "@faker-js/faker";
 import { createRandomUser, createRandomPost } from "../faker/faker-data";
 
 // MOCK
+const LoggedInUserData = createRandomUser(20);
 const UserData = createRandomUser(20);
 const PostData = createRandomPost(30);
 
@@ -62,3 +63,8 @@ export const getPostsData = http.get("api/posts", () => {
 });
 
 // LOGGED-IN USER DATA
+export const getLoggedInUserInfo = http.get("api/user", () => {
+  return HttpResponse.json([LoggedInUserData], {
+    status: 200,
+  });
+});

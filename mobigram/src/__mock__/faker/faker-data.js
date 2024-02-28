@@ -1,9 +1,9 @@
 import { faker } from "@faker-js/faker";
 import shortId from "shortid";
 
-//  user
+// user
 export const createRandomUser = (count) => {
-  Array(count)
+  return Array(count)
     .fill()
     .map(() => ({
       id: shortId.generate(),
@@ -13,34 +13,38 @@ export const createRandomUser = (count) => {
       nickName: faker.person.firstName(),
       location: faker.location.state(),
       // user's posts
-      MyPosts: {
-        id: shortId.generate(),
-        images: Array(Math.floor(Math.random() * 3) + 1)
-          .fill()
-          .map(() => faker.image.url()),
-        content: faker.lorem.paragraph(),
-        location: faker.location.state(),
-        isLiked: false,
-        likedCount: Math.floor(Math.random() * 100),
-      },
+      MyPosts: Array(Math.floor(Math.random() * 30) + 1)
+        .fill()
+        .map(() => ({
+          id: shortId.generate(),
+          images: Array(Math.floor(Math.random() * 3) + 1)
+            .fill()
+            .map(() => faker.image.url()),
+          content: faker.lorem.paragraph(),
+          location: faker.location.state(),
+          isLiked: false,
+          likedCount: Math.floor(Math.random() * 100),
+        })),
       // user's text post
-      MyLogs: {},
+      MyLogs: [{}],
       // user's saved
-      MySavedContents: {},
+      MySavedContents: [{}],
       // user's tagged
-      MeTaggedContents: {},
+      MeTaggedContents: [{}],
       // user's friends list
-      MyFriends: {
-        User: Array(Math.floor(Math.random() * 3) + 1)
-          .fill()
-          .map(() => {
-            return {
-              id: shortId.generate(),
-              nickName: faker.person.firstName(),
-              profileImg: faker.image.url(),
-            };
-          }),
-      },
+      MyFriends: [
+        {
+          User: Array(Math.floor(Math.random() * 3) + 1)
+            .fill()
+            .map(() => {
+              return {
+                id: shortId.generate(),
+                nickName: faker.person.firstName(),
+                profileImg: faker.image.url(),
+              };
+            }),
+        },
+      ],
     }));
 };
 

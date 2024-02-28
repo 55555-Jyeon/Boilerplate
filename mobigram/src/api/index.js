@@ -4,22 +4,15 @@ const getPostList = async (pageParam) => {
   const response = await axiosInstance.get(`api/posts?page=${pageParam}`);
   return response.data;
 };
-const fetchPostList = async (pageParam) => {
-  const response = await axiosInstance.get(`api/posts?page=${pageParam}`);
-  return response.data;
-};
 
 const getFriendList = async () => {
   const response = await axiosInstance.get("api/user");
-  // console.log("response data", response.data); // null
-
   return response.data;
 };
 
 // 번들링 사이즈 감소 목적
 export const Api = {
   getPostList,
-  fetchPostList,
   getFriendList,
 };
 
@@ -34,9 +27,7 @@ export const AuthApi = {
     const response = await axiosInstance.post("api/user/login", loginUserData);
     return response.data;
   },
-
-  // get random users
-  async getUsersData() {
+  async getLoggedInUserData() {
     const response = await axiosInstance.get("api/user");
     console.log("user data?", response.data); // null
     return response.data;
