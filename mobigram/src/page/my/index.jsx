@@ -19,13 +19,14 @@ const MyPage = () => {
 
   // loggedIn User
   const user = createRandomUser(1);
+  console.log("user", user);
 
   const tabs = [
     { name: "REVIEW", content: <ReviewTab user={user} /> },
-    { name: "SCRUM", content: <ScrumTab /> },
-    { name: "SHARE", content: <ShareTab /> },
-    { name: "SAVED", content: <SavedTab /> },
-    { name: "TAGGED", content: <TaggedTab /> },
+    { name: "SCRUM", content: <ScrumTab user={user} /> },
+    { name: "SHARE", content: <ShareTab user={user} /> },
+    { name: "SAVED", content: <SavedTab user={user} /> },
+    { name: "TAGGED", content: <TaggedTab user={user} /> },
   ];
 
   const selectedTab = (index) => {
@@ -36,10 +37,14 @@ const MyPage = () => {
     <Container>
       <Contents>
         <UserInfo>
-          <img src={defaultImage} alt="user profile" />
+          {user[0].profileImg ? (
+            <img src={user[0].profileImg} alt="user selected profile" />
+          ) : (
+            <img src={defaultImage} alt="default user profile" />
+          )}
           <TextInfo>
             <div>
-              <Nickname>Amy</Nickname>
+              <Nickname>{user[0].nickName}</Nickname>
               <div>
                 <BasicButton variant={"profile"} size={"profile"}>
                   Edit Profile
@@ -53,9 +58,9 @@ const MyPage = () => {
               </div>
             </div>
             <div>
-              <h3>2 posts</h3>
-              <h3>3 followers</h3>
-              <h3>2 following</h3>
+              <h3>{user[0].MyPosts.length} posts</h3>
+              <h3>{user[0].MyFollowers.length} followers</h3>
+              <h3>{user[0].MyFollowings.length} following</h3>
             </div>
             <Term>mobi 2nd member</Term>
             <p>안녕하세요, mobi 2기 멤버입니다. 잘부탁드립니다.</p>
